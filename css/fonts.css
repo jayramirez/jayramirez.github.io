@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Rockwell';
+    src: url('../fonts/rock/rock.eot');
+    src: url('../fonts/rock/rock.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/rock/rock.woff') format('woff'),
+         url('../fonts/rock/rock.ttf') format('truetype'),
+         url('../fonts/rock/rock.svg#rock') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Futura LT BT';
+    src: url('../fonts/futura/futural.eot');
+    src: url('../fonts/futura/futural.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/futura/futural.woff') format('woff'),
+         url('../fonts/futura/futural.ttf') format('truetype'),
+         url('../fonts/futura/futural.svg#futural') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'chunkfive';
+    src: url('../fonts/chunkfive/chunkfive.eot');
+    src: url('../fonts/chunkfive/chunkfive.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chunkfive/chunkfive.woff') format('woff'),
+         url('../fonts/chunkfive/chunkfive.ttf') format('truetype'),
+         url('../fonts/chunkfive/chunkfive.svg#chunkfiveroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
