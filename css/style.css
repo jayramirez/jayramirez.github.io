@@ -131,7 +131,7 @@ section.main{
 	#about{
 		text-align: center;
 		color:#535859;
-		background: #fff  url(../img/sponge-bg.jpg) ;
+		background: #fff  url(../img/sponge-bg.jpg) fixed;
 	}
 
 
@@ -156,10 +156,10 @@ section.main{
 				border-radius: 100%;
 				font-size: 14px;
 				position: relative;
-				background: #12c7ee url(../img/index-bg.jpg) ;
+				background: #12c7ee url(../img/index-bg.jpg) fixed;
 				color: #fff;
-				border: solid 10px #f1f1f1;
-				box-shadow: 0px 2px 0px #ccc;
+				border: solid 10px #eee;
+				box-shadow: 0px 3px 0px 2px rgba(0,0,0,0.1);
 			}	
 				ul.what-i-do li div{
 					position: absolute;
@@ -184,7 +184,7 @@ section.main{
 
 	#experience.page{
 		background: #13c6ee;
-		min-height: 0 !important;
+		min-height: 600px;
 	}
 	#experience .container:after{
 		display: block;
@@ -203,20 +203,20 @@ section.main{
 				text-align: center;
 				border-radius: 100%;
 				padding: 30px;
-				background: url('../img/index-bg.jpg');
-				box-shadow: 0px 5px 0px #bbb;
+				background: url('../img/index-bg.jpg') fixed;
+				box-shadow: 0px 5px 0px  rgba(0,0,0,0.1);
 				opacity: 0;
 			}	
 				#experience .badge span{
 					font: 200px 'chunkfive', Arial;
 					display: block;
 					line-height: 160px;
-					text-shadow: 2px 4px 0px #aaa;
+					text-shadow: 2px 4px 0px rgba(0,0,0,0.1);
 				}
 				#experience .badge sub{
 					font: 30px 'chunkfive', Arial;
 					display: block;
-					text-shadow: 2px 4px 0px #aaa;
+					text-shadow: 2px 4px 0px rgba(0,0,0,0.1);
 				}
 		#experience .right{
 			width: 60%;
@@ -356,7 +356,7 @@ section.main{
 			}
 
 	#works{
-		background:url(../img/gray-bg.jpg) ;
+		background:url(../img/gray-bg.jpg) fixed;
 		color: #333;
 	}
 
