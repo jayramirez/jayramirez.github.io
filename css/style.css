@@ -22,6 +22,7 @@ header{
 	width: 100%;
 	top: 0px;
 	z-index: 5;
+	display: none;
 }
 	header nav{
 		float: right;
@@ -50,7 +51,7 @@ header{
 		background-size: contain;
 	}
 section.main{
-	min-height: 1000px
+	min-height: 100%;
 }
 
 	.container{
@@ -64,6 +65,7 @@ section.main{
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
+		min-height: 100%;
 	}
 
 		.page h2{
@@ -74,15 +76,23 @@ section.main{
 		text-align: center;
 		font-family: 'Futura';
 		color:#fff;
-		background:  url(../img/index-bg.jpg) ;
-		padding: 260px 0 200px;
+		/*background:  url(../img/index-bg.jpg) ;*/
+		background: #fff;
+		padding: 200px 0 200px;
 		position: relative;
 		transition: background 100ms;
 	}
 
 		#home .copy{
-			position: relative;
+			position: absolute;
 			z-index: 2;
+			color: #13c6ee;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%,-50%);
+			-moz-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+			width: 100%;
 		}
 		#home h1{
 			font: normal 80px chunkfive;
@@ -93,13 +103,14 @@ section.main{
 		#home h4{
 			font-weight: normal;
 			font-size: 20px;
+
 		}
 			#home h4 span{
 				margin: 0 10px;
 			}
 
-			#home h3{
-				font: normal 20px chunkfive;
+			#home h2{
+				font: normal 30px Futura;
 			}
 
 		#home .stand{
@@ -108,7 +119,10 @@ section.main{
 			width: 180px;
 			height: 500px;
 			position: absolute;
-			bottom: 20px;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			transform: translateY(-50%);
 			left: 50%;
 			margin-left: -500px;
 			z-index: 1
@@ -168,20 +182,20 @@ section.main{
 					margin: 0;
 				}
 
-	#expirience.page{
+	#experience.page{
 		background: #13c6ee;
 		min-height: 0 !important;
 	}
-	#expirience .container:after{
+	#experience .container:after{
 		display: block;
 		content: '';
 		clear: both;
 	}
-		#expirience .left{
+		#experience .left{
 			width: 40%;
 			float: left;
 		}		
-			#expirience .badge{
+			#experience .badge{
 				float: right;
 				width: 200px;
 				height: 200px;
@@ -193,28 +207,28 @@ section.main{
 				box-shadow: 0px 5px 0px #bbb;
 				opacity: 0;
 			}	
-				#expirience .badge span{
+				#experience .badge span{
 					font: 200px 'chunkfive', Arial;
 					display: block;
 					line-height: 160px;
 					text-shadow: 2px 4px 0px #aaa;
 				}
-				#expirience .badge sub{
+				#experience .badge sub{
 					font: 30px 'chunkfive', Arial;
 					display: block;
 					text-shadow: 2px 4px 0px #aaa;
 				}
-		#expirience .right{
+		#experience .right{
 			width: 60%;
 			float: left;
 			overflow-x:hidden;
 		}
 
-			#expirience ul.exp{
+			#experience ul.exp{
 				list-style: none;
 			}
 
-			#expirience ul.exp > li{
+			#experience ul.exp > li{
 				text-align: left;
 				margin-bottom: 30px;
 				border-left: 3px #fff solid;
@@ -222,19 +236,19 @@ section.main{
 				opacity: 0;
 
 			}
-				#expirience ul.exp > li h3{
+				#experience ul.exp > li h3{
 					font-size: 18px;
 					margin: 0;
 					font-family: 'chunkfive', Arial;
 					font-weight: normal;
 					text-shadow: 1px 1px 0px #aaa;
 				}
-				#expirience ul.exp > li h4{
+				#experience ul.exp > li h4{
 					font-size: 20px;
 					margin: 0;
 					font-weight: normal;
 				}
-				#expirience ul.exp > li span{
+				#experience ul.exp > li span{
 					font-size: 12px;
 				}
 	#skills{
@@ -289,7 +303,6 @@ section.main{
 						width: 1px;
 						-webkit-transition: width 1s;
   						transition: width 1s;
-  						border-radius: 0 50px 0 0;
 					}
 						ul.skillset .score span{
 							font-style: normal;
@@ -375,7 +388,7 @@ section.main{
 		background: #111;
 		padding: 20px;
 		text-align: center;
-		font-size: 24px;
+		font-size: 18px;
 	}
 
 .lytebox{
@@ -495,12 +508,12 @@ section.main{
 	}
 
 		#home h1{
-			font-size: 56px;
+			font-size: 40px;
 		}
 
-		 #home h4 span{
-		 	display: block;
-		 }
+		#home h2{
+			font-size: 25px;
+		}
 
 		#home .stand{
 			margin-left: -140px;
@@ -511,12 +524,12 @@ section.main{
 		margin: 0;
 	}
 
-	#expirience .left, #expirience .right{
+	#experience .left, #experience .right{
 		float: none;
 		width: 100%;
 		display: block;
 	}
-		#expirience .badge{
+		#experience .badge{
 			float: none;
 			width: auto;
 			border: none;
@@ -524,7 +537,7 @@ section.main{
 			box-shadow: none;
 		}
 		
-		#expirience ul.exp{
+		#experience ul.exp{
 			padding: 0;
 		}
 
