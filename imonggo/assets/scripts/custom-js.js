@@ -1,4 +1,3 @@
-
 var animationPeak = 979;
 
 function setSectionHeight() {
@@ -594,7 +593,7 @@ $(document).ready(function() {
 	});
 	
 	$(function(){
-		$('#header-wrap nav ul').slicknav({
+		$('#header-wrap nav.main-nav ul').slicknav({
 			prependTo:'.top-nav',
 			init: function() {
 				$(".top-nav > a").each(function(){
