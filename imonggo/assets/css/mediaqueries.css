@@ -217,7 +217,7 @@
 	}
 	
 	.aboutbox {
-		padding: 30px !important;
+		padding: 15px !important;
 	}
 	
 	.subpage-title {
@@ -354,4 +354,11 @@
 	.cardboard .inner-wrap h2 {
 		font-size: 24px;
 	}
+}
+
+
+@media(max-width: 720px){
+    .t20 { font-size:20px;} .t18 {font-size: 18px;} .t30 { font-size:20px;} .t65 { font-size: 35px;}
+    .t34 { font-size:24px;} .t15 { font-size: 15px;} .t36 { font-size:26px;} .t40 { font-size: 30px;} .t28 { font-size: 18px;}
+    .t17 { font-size:14px;}
 }

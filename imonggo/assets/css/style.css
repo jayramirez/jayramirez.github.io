@@ -1062,6 +1062,12 @@ h3.aboutorangebottom {
         color: #000 !important;
     }
 }
+@media(max-width: 720px){
+    .testibox{
+        border: 0;
+        border-bottom: solid 1px #ccc;
+    }
+}
 .thetestimonial p {
     color: #fff;
 }
@@ -1228,12 +1234,6 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color:#646464;}
     -ms-transition: all 0.3s ease-out;
 }
 
-@media(max-width: 720px){
-    .t20 { font-size:20px;} .t18 {font-size: 18px;} .t30 { font-size:20px;} .t65 { font-size: 35px;}
-    .t34 { font-size:24px;} .t15 { font-size: 15px;} .t36 { font-size:26px;} .t40 { font-size: 30px;} .t28 { font-size: 18px;}
-    .t17 { font-size:14px;}
-}
-
 /*override*/
 @media(max-width: 722px){
     .pricing .t36{
@@ -1249,12 +1249,12 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color:#646464;}
     }
 
     .pricing .col-md-2{
-        padding-right: 5px;
-        padding-left: 5px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
     .pricing .col-xs-6{
-        padding-right: 5px;
-        padding-left: 5px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }
 
