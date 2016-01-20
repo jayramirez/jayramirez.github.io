@@ -1237,6 +1237,18 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color:#646464;}
 }
 
 /*override*/
+.comming-soon-sash{position: relative;}
+.comming-soon-sash:after{
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: url(../images/coming_soon.png) center;
+background-size: cover;
+opacity: 0.5;
+}
 @media(max-width: 722px){
     .pricing .t36{
         font-size: 26px;
