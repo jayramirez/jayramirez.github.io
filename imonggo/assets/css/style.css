@@ -396,7 +396,7 @@ section.scene-4 .scene-bg {
 	transform: translateX(-50%);
 	width: 38px;
     height: 24px;
-	z-index: 9999;
+	z-index: 99;
 	cursor: pointer;
 }
 
@@ -649,44 +649,14 @@ body .slicknav_nav a:hover {
     100% { opacity: 1.0; }
 }
 
-/* LOGIN PAGE */
-.loginpadding {
-    padding: 0 50px;
+/* LOGIN POPUP */
+#loginModal .modal-dialog{
+    width: 400px;
 }
-.loginwrap {
-    padding: 50px 0;
+#loginModal .modal-title{
+    font-weight: normal;
 }
-.loginfield {
-    border-color: -moz-use-text-color -moz-use-text-color #a1a1a1 !important;
-    border-style: none none solid !important;
-    border-width: medium medium 2px !important;
-    color: #a1a1a1 !important;
-    font-family: "Open Sans",serif !important;
-    font-size: 15px !important;
-    margin-bottom: 50px;
-}
-.loginbottomlinks a {
-    color: #777;
-    display: inline-block;
-    font-size: 13px !important;
-    margin-top: 35px;
-    padding: 10px 5px;
-}
-.logintitle {
-    font-size: 35px;
-    margin-top: 0;
-}
-.loginwarning {
-    background: #fc0d1b none repeat scroll 0 0;
-    color: #fff;
-    margin-bottom: 50px;
-    padding: 15px 0;
-}
-.loginfield:focus {
-    border-bottom: 2px solid #e65525 !important;
-    color: #e65525 !important;
-}
-.loginsubmit {
+#loginModal .loginsubmit{ 
     background: #fc6d21 none repeat scroll 0 0;
     border: 0 none;
     color: #fff;
@@ -694,6 +664,36 @@ body .slicknav_nav a:hover {
     font-size: 15px;
     padding: 15px;
     width: 100%;
+}
+
+#loginModal .loginfield {
+    border-color: -moz-use-text-color -moz-use-text-color #a1a1a1 !important;
+    border-style: none none solid !important;
+    border-width: medium medium 2px !important;
+    color: #a1a1a1 !important;
+    font-family: "Open Sans",serif !important;
+    font-size: 15px !important;
+    margin-bottom: 30px;
+}
+
+.loginwarning {
+    background: #fc0d1b none repeat scroll 0 0;
+    color: #fff;
+    margin: 20px -30px 0;
+}
+
+.loginwarning span{
+    padding: 15px;
+    display: block;
+}
+
+.loginbottomlinks a{
+    color: #999;
+    font-size: 11px;
+}
+.loginbottomlinks{
+    text-align: center;
+    margin-top: 40px;
 }
 .loginbottomlinks a::before {
     content: "|";
