@@ -192,18 +192,6 @@ section.scene {
     height: 100vh;
 }
 
-@media(max-width: 480px){
-    section.scene {
-        min-height: 300px;
-        height: auto;
-    }
-
-    .scene .obj{
-        display: none;
-    }
-}
-
-
 section.scene .scene-bg {
 	background-size: cover;
 	background-position: bottom center ;
@@ -425,7 +413,7 @@ section.scene-4 .scene-bg {
     height: 45%;
 }
 
- 
+
 
 .cardboard .inner-wrap {
     display: inline-block;
