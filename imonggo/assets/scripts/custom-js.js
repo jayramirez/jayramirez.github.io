@@ -587,7 +587,7 @@ $(document).ready(function() {
 	testimonialFunc();
 	
 	$(".explore-arrow").click(function(){
-		$("html, body").animate({ scrollTop: window.innerHeight }, 1500);
+		//$("html, body").animate({ scrollTop: window.innerHeight }, 1500);
 		// var getSndSceneScroll = $(".scene-2").offset().top + (window.innerHeight * 4.5) + (window.innerHeight * .60);
 		// $("html, body").animate({ scrollTop: getSndSceneScroll }, 1500);
 		// return false;

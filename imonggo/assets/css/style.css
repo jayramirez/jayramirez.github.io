@@ -65,6 +65,7 @@ nav ul li a {
     -o-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
 }
+
 nav ul li a:hover, .nav ul li a.current {
     background: #e65525 none repeat scroll 0 0;
 }
@@ -188,9 +189,18 @@ box-shadow: -1px 3px 12px 0px rgba(0,0,0,0.3);
 section.scene {
 	position: relative;
 	overflow: hidden;
-    min-height: 480px;
     height: 100vh;
-    min-height: 640px;
+}
+
+@media(max-width: 480px){
+    section.scene {
+        min-height: 300px;
+        height: auto;
+    }
+
+    .scene .obj{
+        display: none;
+    }
 }
 
 
@@ -407,22 +417,15 @@ section.scene-4 .scene-bg {
 }
 
 .scene .cardboard-1 {
-	background-image: url('../images/cardboard-1.svg');
-    background-size: 70% auto;
-    background-position: center 10% ;
+	background-image: url('../images/point-of-sale.png');
+    background-size: contain;
+    background-position: center ;
+    position: absolute;
+    top: 100px;
+    height: 45%;
 }
-    @media(max-width: 1200px){
-       .scene .cardboard-1 {
-        background-size: 90% auto;
-        background-position: center 30% ;
-        } 
-    }
-    @media(max-width: 992px){
-       .scene .cardboard-1 {
-        background-size: 150% auto;
-        background-position: center 30% ;
-        } 
-    }
+
+ 
 
 .cardboard .inner-wrap {
     display: inline-block;
@@ -650,13 +653,26 @@ body .slicknav_nav a:hover {
 }
 
 /* LOGIN POPUP */
-#loginModal .modal-dialog{
-    width: 400px;
+.loginwrap{
+    padding: 50px;
+    max-width: 450px;
+    margin: 140px auto 40px;
 }
-#loginModal .modal-title{
-    font-weight: normal;
+
+@media(max-width: 480px){
+   .loginwrap{
+        max-width: 95%;
+        padding: 20px;
+        margin: 105px auto 20px;
+    }
 }
-#loginModal .loginsubmit{ 
+
+.logintitle{
+    font-size: 2rem;
+    margin: 0;
+}
+
+.loginsubmit{ 
     background: #fc6d21 none repeat scroll 0 0;
     border: 0 none;
     color: #fff;
@@ -666,22 +682,27 @@ body .slicknav_nav a:hover {
     width: 100%;
 }
 
-#loginModal .loginfield {
+.loginfield {
     border-color: -moz-use-text-color -moz-use-text-color #a1a1a1 !important;
     border-style: none none solid !important;
     border-width: medium medium 2px !important;
     color: #a1a1a1 !important;
     font-family: "Open Sans",serif !important;
     font-size: 15px !important;
-    margin-bottom: 30px;
+    margin: 15px 0;
 }
+
 
 .loginwarning {
     background: #fc0d1b none repeat scroll 0 0;
     color: #fff;
-    margin: 20px -30px 0;
+    margin: 20px -50px 0;
 }
-
+@media(max-width: 480px){
+   .loginwarning{
+        margin: 20px -20px;
+    }
+}
 .loginwarning span{
     padding: 15px;
     display: block;
@@ -690,6 +711,7 @@ body .slicknav_nav a:hover {
 .loginbottomlinks a{
     color: #999;
     font-size: 11px;
+    display: inline;
 }
 .loginbottomlinks{
     text-align: center;
@@ -1239,15 +1261,22 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color:#646464;}
 /*override*/
 .comming-soon-sash{position: relative;}
 .comming-soon-sash:after{
-content: '';
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background: url(../images/coming_soon.png) center;
-background-size: cover;
-opacity: 0.5;
+    content: 'COMING SOON!';
+    position: absolute;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #E65525;
+    left: 0;
+    right: 0;
+    color: #fff;
+    top:50%;
+    margin-top: -40px;
+    border: solid #fff;
+    border-width: 5px 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 @media(max-width: 722px){
     .pricing .t36{

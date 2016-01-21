@@ -33,7 +33,6 @@
 <link rel="stylesheet" href="assets/css/slicknav.min.css" />
 <script type='text/javascript' src='assets/scripts/jquery.js'></script>
 <script type='text/javascript' src='assets/scripts/bootstrap.min.js'></script>
-<script src="assets/scripts/slick.js"></script>
 <script src="assets/scripts/custom-js.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 <script type='text/javascript' src='assets/scripts/jquery.slicknav.min.js'></script>
@@ -46,7 +45,7 @@
 				<a href="index.html"><img src="assets/images/imonggologo.png" alt="logo"/></a>
 			</div>
 			<div class="top-nav">
-				<a href="#" class="btn-style-1" data-toggle="modal" data-target="#loginModal">Log In</a>
+				<a href="login.html" class="btn-style-1">Log In</a>
 				<a href="sign-up.html" class="btn-style-2">Get your FREE Account</a>
 			</div>
 		</div>
@@ -70,7 +69,7 @@
 	<section class="scene scene-1">
 		<div class="scene-bg"></div>
 		<div class="obj cardboard cardboard-1 fixed"></div>
-		<div class="explore-arrow"></div>
+		<div class="explore-arrow blink_me"></div>
 		<div class="obj laptop"></div>
 	</section>
 	<section class="scene scene-2">
@@ -656,35 +655,6 @@
 	</div><!-- container -->
 </div><!-- #footer -->
 
-<!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
-        <h1 class="modal-title">Login</h1>
-        <div class="loginwarning">
-			<span>Invalid Log In Password. Please Try Again</span>
-		</div>
-      </div>
-      <div class="modal-body">
-        <div class="loginpadding">
-			<input type="text" placeholder="Account ID" class="loginfield" name="account id">
-			<input type="email" placeholder="Email" class="loginfield" name="email">
-			<input type="password" placeholder="Password" class="loginfield" name="password">
-		</div>
-      </div>
-      <div class="modal-footer">
-        <button class="loginsubmit" value="SUBMIT" type="submit">Log In</button>
-        <div class="loginbottomlinks">
-			<a href="#">Forgot Password</a>
-			<a href="#">Forgot Account ID</a>
-			<a href="#">Trouble Logging In</a>
-		</div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="jscripts">
 <script>
