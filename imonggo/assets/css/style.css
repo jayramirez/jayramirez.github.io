@@ -35,6 +35,21 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
+body.loading.landing-page:after{
+    position: fixed;
+    content: '';
+    top: 0;right: 0;left: 0;bottom: 0;
+    background:#fff url(../images/preload.gif) center no-repeat;
+    z-index: 999999;
+    -webkit-transition: opacity 300ms;
+    -moz-transition: opacity 300ms;
+    -ms-transition: opacity 300ms;
+    transition: opacity 300ms;
+}
+body.loading.loaded:after{
+    opacity: 0;
+}
+
 nav ul {
 	list-style: none;
 	font-size: 0px;
