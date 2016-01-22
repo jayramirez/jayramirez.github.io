@@ -1268,6 +1268,15 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color:#646464;}
 }
 
 /*override*/
+.login-page{
+    background: url(../images/login-bg.jpg) top center no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+.login-page .pagecontent{
+    background-color: transparent;
+}
 .comming-soon-sash{position: relative;}
 .comming-soon-sash:after{
     content: 'COMING SOON!';
