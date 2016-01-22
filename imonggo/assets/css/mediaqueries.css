@@ -261,11 +261,11 @@
 	}
 	
 	#header-wrap .section-1 .top-nav {
-		float: none;
+		/*float: none;
 		display: block;
 		text-align: left;
 		vertical-align: top;
-		margin-top: -30px;
+		margin-top: -30px;*/
 	}
 	
 	#header-wrap .slicknav_nav {

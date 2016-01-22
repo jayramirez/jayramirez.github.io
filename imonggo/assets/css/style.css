@@ -167,6 +167,7 @@ box-shadow: -1px 3px 12px 0px rgba(0,0,0,0.3);
 	box-sizing: border-box;
 	margin: 0px auto;
 	padding: 7px 10px;
+    position: relative;
 }
 
 #header-wrap .top-bar:after {
@@ -185,7 +186,13 @@ box-shadow: -1px 3px 12px 0px rgba(0,0,0,0.3);
 }
 
 #header-wrap .section-1 .top-nav {
-	float: right;
+	position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+@media(max-width: 768px){
+   #header-wrap .section-1 .top-nav { } 
 }
 
 #header-wrap .section-2 {
