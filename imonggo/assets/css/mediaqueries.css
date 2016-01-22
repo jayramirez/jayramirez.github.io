@@ -261,11 +261,14 @@
 	}
 	
 	#header-wrap .section-1 .top-nav {
-		/*float: none;
+		position: relative;
+		top: auto;
+		float: none;
 		display: block;
 		text-align: left;
 		vertical-align: top;
-		margin-top: -30px;*/
+		margin-top: -30px;
+		right: auto;
 	}
 	
 	#header-wrap .slicknav_nav {
@@ -373,7 +376,7 @@
         display: block ;
         position: relative;
         width: 90%;
-        height: 400px;
+        height: 300px;
         top: 0px;
         margin: 0 auto
     }
