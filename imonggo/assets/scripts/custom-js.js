@@ -633,11 +633,3 @@ $(window).resize(function() {
 $(window).scroll(function() {
 	initAnimationScene();
 });
-
-window.onload = function(){
-	$('body').addClass('loaded');
-
-	setTimeout(function(){
-		$('body').removeClass('loading');
-	},300);
-}
