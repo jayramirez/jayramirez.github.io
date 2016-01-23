@@ -81,9 +81,9 @@
 	}
 	
 	.obj.laptop {
-		position: absolute !important;
+		/*position: absolute !important;
 		top: 0px !important;
-		bottom: auto !important;
+		bottom: auto !important;*/
 	}
 	
 	nav ul li a {
