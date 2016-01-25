@@ -482,7 +482,7 @@ section.scene-4 .scene-bg {
     right: auto;
     bottom: 100px;
     top: auto;
-    margin-left: 700px;
+    margin-left: 550px;
     width: 300px;
     height: 300px;
     -webkit-transform: translateX(-50%);
@@ -563,7 +563,7 @@ section.scene-4 .scene-bg {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     bottom: 100px;
-    margin-left: -250px;
+    margin-left: -180px;
     width: 100px;
     height: 150px;
 }
@@ -628,7 +628,9 @@ section.scene-4 .scene-bg {
 	font-size: 0px;
 	z-index: 999;
 }
-
+.obj.cardboard{
+    position: static;
+}
 .scene .cardboard-1 {
 	background-image: url('../images/point-of-sale.png');
     background-size: contain;

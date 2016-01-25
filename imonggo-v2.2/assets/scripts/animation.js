@@ -1,5 +1,4 @@
 
-	var animationDuration = 1000;
   	var controller = new ScrollMagic.Controller();
 
 	var tween = new TimelineMax ();
@@ -11,7 +10,7 @@ function homeAnimation(){
   	var scene1 = new ScrollMagic.Scene({triggerElement: ".scene-1", duration: 500})
 		.setTween(tween).setPin(".scene-1").addTo(controller);
 
-	var scene2 = new ScrollMagic.Scene({triggerElement: ".scene-2", duration: 1000 })
+	var scene2 = new ScrollMagic.Scene({triggerElement: ".scene-2", duration: 2000 })
 		.setTween(tween).setPin(".scene-2").addTo(controller);
 
 	var cardboard2 = TweenMax.from(".cardboard-2", 4, {css: {opacity : 0, y : "-=500px"}, ease:Linear.easeNone});
@@ -26,7 +25,7 @@ function homeAnimation(){
 	var tag3 	= TweenMax.from(".tag-3", 1.24, {css: {y : "-=500px"}, ease:Linear.easeNone});
 	var tag4 	= TweenMax.from(".tag-4", 2.25, {css: {y : "-=500px"}, ease:Linear.easeNone});
 
-	var scene2elements = new ScrollMagic.Scene({triggerElement: ".scene-2", duration: 1000})
+	var scene2elements = new ScrollMagic.Scene({triggerElement: ".scene-2", duration: 1800})
 		.setTween([laptop2,table2,cardboard2,gift1,gift2,gift3,gift4,tag1,tag2,tag3,tag4]).addTo(controller);
 
 	var cardboard3 	= TweenMax.from(".cardboard-3", 2, {css: {opacity : 0, y : "-=1000px"}, ease:Linear.easeNone});
@@ -34,17 +33,17 @@ function homeAnimation(){
 	var earth 		= TweenMax.from(".obj.earth", 1.5, {css: { y : "+=500px"}, ease:Linear.easeNone});
 	var Sun 		= TweenMax.from(".obj.sun", 1.8, {css: { y : "+=500px", x : "-=1000px"}, ease:Linear.easeNone});
 	var moon 		= TweenMax.from(".obj.moon", 1.2, {css: { y : "-=500px", x : "-=500px"}, ease:Linear.easeNone});
-	var satellite 	= TweenMax.from(".obj.satellite", 2, {css: { y : "-=500px", x : "+=500px"}, ease:Linear.easeNone});
+	var satellite 	= TweenMax.from(".obj.satellite", 2, {css: { y : "-=200px", x : "+=1000px"}, ease:Linear.easeNone});
 	var paper 		= TweenMax.from(".obj.paper", 2, {css: { y : "+=100px", x : "+=100px", scaleX: 0.5, scaleY: 0.5}, ease:Linear.easeNone});
 	var mug 		= TweenMax.from(".obj.mug", 2, {css: { y : "+=90px", x : "+=100px", scaleX: 0.5, scaleY: 0.5}, ease:Linear.easeNone});
 	var box 		= TweenMax.from(".obj.box", 2, {css: { y : "+=100px", x : "-=100px", scaleX: 0.5, scaleY: 0.5}, ease:Linear.easeNone});
 	var branches 	= TweenMax.from(".obj.branches", 2, {css: { y : "+=1000px", scaleX: 0.5, scaleY: 0.5}, ease:Linear.easeNone});
 
 	
-	var scene3 = new ScrollMagic.Scene({triggerElement: ".scene-3", duration: 1000})
+	var scene3 = new ScrollMagic.Scene({triggerElement: ".scene-3", duration: 2000})
 		.setTween(tween).setPin(".scene-3").addTo(controller);
 
-	var scene3elements = new ScrollMagic.Scene({triggerElement: ".scene-3", duration: 1000})
+	var scene3elements = new ScrollMagic.Scene({triggerElement: ".scene-3", duration: 1800})
 		.setTween([laptop3, cardboard3,earth,Sun,moon,satellite,paper,mug,box,branches]).addTo(controller); 
 
 	var cardboard4 = TweenMax.from(".cardboard-4", 2, {css: {opacity : 0, y : "-=1000px"}, ease:Linear.easeNone});
@@ -56,10 +55,10 @@ function homeAnimation(){
 	var building5 = TweenMax.from(".building-5", 3.6, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
 	var building6 = TweenMax.from(".building-6", 4, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
 
-   var scene4 = new ScrollMagic.Scene({triggerElement: ".scene-4", duration: 1000})
+   var scene4 = new ScrollMagic.Scene({triggerElement: ".scene-4", duration: 2000})
 		.setTween(tween).setPin(".scene-4").addTo(controller);  
 
-	var scene4elements = new ScrollMagic.Scene({triggerElement: ".scene-4", duration: 1000})
+	var scene4elements = new ScrollMagic.Scene({triggerElement: ".scene-4", duration: 1800})
 		.setTween([ laptop4, cardboard4, building1, building2, building3, building4, building5, building6]).addTo(controller);  
 
 	scene1.offset($('.scene-1').height()/2 );
