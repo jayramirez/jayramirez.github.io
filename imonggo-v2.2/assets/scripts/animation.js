@@ -86,8 +86,9 @@ function homeAnimation(){
 				scene2elements.refresh()
 				scene3elements.refresh()
 				scene4elements.refresh()
+
 				$('html,body').animate({scrollTop: 0},1)
-			},1000)
+			},300)
 	});
 }
 

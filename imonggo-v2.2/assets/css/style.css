@@ -271,10 +271,7 @@ section.scene-4 .scene-bg {
 	position: absolute;
 	left: 50%;
     right: auto;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    margin-left: -200px;
     bottom: 70px;
 	z-index: 999;
     width: 400px;
@@ -301,14 +298,19 @@ section.scene-4 .scene-bg {
     left: 50%;
     right: auto;
     top: auto;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    margin-left: -200px;
     bottom: 70px;
     z-index: 999;
     width: 400px;
     height: 280px;
+}
+@media(max-height: 700px){
+    .obj.laptop, .laptop-dummy {
+        margin-left: -157px;
+        width: 315px;
+        height: 202px;
+        bottom: 60px;
+    }
 }
 .obj.table {
     left: 50%;
@@ -321,6 +323,11 @@ section.scene-4 .scene-bg {
     width: 1300px;
     height: 265px;
     background-size: contain;
+}
+@media(max-height: 700px){
+    .obj.table{
+        width: 1000px;
+    }
 }
 
 .obj.table-unligrowth {
