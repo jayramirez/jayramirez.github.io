@@ -366,19 +366,31 @@
         display: none;
     }
     section.scene .scene-bg{
-        background-size: 200% auto;
     }
     .explore-arrow{
         display: none;
     }
-
+    .scene.scene-1{
+    	height: 400px;
+    }
     .scene .cardboard-1{
         display: block ;
         position: relative;
-        width: 90%;
-        height: 300px;
-        top: 0px;
-        margin: 0 auto
+        width: 80%;
+        height: 200px;
+        top: 50px;
+        left: auto;
+        margin: 0 auto ;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+    .obj.laptop{
+    	display: block;
+    	width: 160px;
+    	height: 160px;
+    	bottom: 20px;
     }
     .laptop-dummy{
         display: none !important;
