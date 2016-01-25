@@ -337,9 +337,14 @@
 	.cardboard .inner-wrap {
 		max-width: 300px;
 		margin-top: -40%;
-		padding: 20px;
+		padding: 50px 20px;
 		vertical-align: middle;
 		font-size: 14px;
+		background: rgba(255,255,255,0.5);
+	}
+
+	.cardboard .inner-wrap p{
+		color: #666
 	}
 	
 	.cardboard .inner-wrap h2 {
@@ -402,7 +407,7 @@
         position: relative;
         width: 90%;
         top: auto;
-        margin: 80px auto;
+        margin: 40px auto;
     }
 
     .cardboard .inner-wrap{
