@@ -891,6 +891,7 @@ body .slicknav_nav a:hover {
     font-size: 15px;
     padding: 15px;
     width: 100%;
+    cursor: pointer;
 }
 
 .loginfield {
@@ -1150,14 +1151,14 @@ h3.aboutorangebottom {
 	margin-bottom: 30px;
 }
 .suptitle::before {
-    background-image: url("assets/images/sun.png");
+    /*background-image: url("assets/images/sun.png");
     content: "";
     height: 76px;
     left: 80px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 103px;
+    width: 103px;*/
 }
 #header-wrap-sticky-wrapper {
     position: relative;
@@ -1482,13 +1483,12 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; color:#646464;}
 
 /*override*/
 .login-page{
-    background: url(../images/login-bg.jpg) top center no-repeat;
-    background-size: cover;
     height: 100%;
     background-attachment: fixed;
 }
 .login-page .pagecontent{
-    background-color: transparent;
+    background: url(../images/scene-1-bg.jpg) top center no-repeat;
+    background-size: cover;
 }
 .comming-soon-sash{position: relative;}
 .comming-soon-sash:after{
@@ -1594,7 +1594,7 @@ form.sign-up  .submit{
     top : 7000px;
 }
 .trigger-3-exit{
-    top : 9000px;
+    top : 9500px;
 }
 
 .trigger-4{
