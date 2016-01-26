@@ -629,10 +629,8 @@ section.scene-4 .scene-bg {
     height: 35%;
     width: 50%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    width: 742px;
+    margin-left: -372px;
 }
 
 /*.scene .cardboard-2,.scene .cardboard-3,.scene .cardboard-4{
@@ -1558,6 +1556,7 @@ form.sign-up  .submit{
 .scenes{
     height: 100vh;
     position: relative;
+    width: 100%;
 }
 
 .scenes .scene{
@@ -1567,11 +1566,13 @@ form.sign-up  .submit{
     bottom: 0;
     left: 0;
 }
+
+
 .scenes .scene-1{z-index: 4 }
 .scenes .scene-2{z-index: 3 }
 .scenes .scene-3{z-index: 2 }
 .scenes .scene-4{z-index: 1 }
-.scene-2 .table{ display:  none}
+.scene-4 .table-unligrowth{display: none;}
 .laptop-dummy{ display:  none}
 .trigger{
     right: 0;
@@ -1599,6 +1600,48 @@ form.sign-up  .submit{
 .trigger-4{
     top : 11000px;
 }
+
+@media(max-width: 1300px){
+    .trigger{display: none;}
+    .scenes{ height: auto;}
+    .scenes .scene{
+        position: relative;
+        height: 100vh;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+    }
+    .laptop-dummy{
+        display: block;
+    }
+    .obj.cardboard{
+        position: relative;
+    }
+    .scene-3 .table-unligrowth{display: none;}
+    .scene-4 .table-unligrowth{display: block;}
+}
+
+
+.home-page.disabled .trigger{display: none;}
+.home-page.disabled .scenes{ height: auto;}
+.home-page.disabled .scenes .scene{
+    position: relative;
+    height: 100vh;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+}
+.home-page.disabled .laptop-dummy{
+    display: block;
+}
+.home-page.disabled .obj.cardboard{
+    position: relative;
+}
+.home-page.disabled .scene-3 .table-unligrowth{display: none;}
+.home-page.disabled .scene-4 .table-unligrowth{display: block;}
+
 
 @media(max-width: 720px){
     form.sign-up .input-wrap label{ display: block; width: auto; text-align: left; }

@@ -362,7 +362,7 @@
 
 /*home*/
 @media(max-width: 480px){
-    section.scene {
+    .scenes .scene {
     	min-height: 100px;
         height: auto;
     }
@@ -381,15 +381,11 @@
     .scene .cardboard-1{
         display: block ;
         position: relative;
-        width: 80%;
+        width: 300px;
         height: 200px;
         top: 50px;
         left: auto;
         margin: 0 auto ;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
     }
     .obj.laptop{
     	display: block;
