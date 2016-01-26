@@ -387,6 +387,13 @@
         left: auto;
         margin: 0 auto ;
     }
+    .scene-1 .obj.table{
+    	display: block;
+	    height: 200px;
+	    margin-left: -200px;
+	    width: 400px;
+	    bottom: 2px;
+    }
     .obj.laptop{
     	display: block;
     	width: 160px;
