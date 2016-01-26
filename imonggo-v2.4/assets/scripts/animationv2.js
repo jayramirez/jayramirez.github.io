@@ -29,6 +29,9 @@ function HomeAnimation(){
 			$(window).resize(function(){
 				if(timer){clearTimeout(timer)}
 				timer = setTimeout(function(){
+					if( $(window).width()<1200 ){
+						return false;
+					}
 					$('.home-page').addClass('loading');
 					$('.home-page').removeClass('loaded');
 					setTimeout(function(){
