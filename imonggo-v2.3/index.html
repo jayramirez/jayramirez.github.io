@@ -43,7 +43,7 @@
 	<script type="text/javascript" src="assets/scripts/scrollMagic.min.js"></script>
 	<script type="text/javascript" src="assets/scripts/animation.gsap.js"></script>
 	<script type="text/javascript" src="assets/scripts/addIndicators.min.js"></script>
-	<script type="text/javascript" src="assets/scripts/animation.js"></script>
+	<script type="text/javascript" src="assets/scripts/animationv2.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 
 </head>
@@ -76,11 +76,18 @@
 	</div>
 </header>
 <div id="container">
+	<div class="trigger trigger-1"></div>
+	<div class="trigger trigger-2"></div>
+	<div class="trigger trigger-2-exit">scene 2 exit</div>
+	<div class="trigger trigger-3"></div>
+	<div class="trigger trigger-3-exit"></div>
+	<div class="trigger trigger-4"></div>
 	<div class="scenes">
 		<section class="scene scene-1">
 			<div class="scene-bg"></div>
 			<div class="obj cardboard cardboard-1 fixed"></div>
 			<div class="obj laptop"></div>
+			<div class="obj table"></div>
 			<div class="explore-arrow blink_me"></div>
 		</section>
 		<section class="scene scene-2">
@@ -101,7 +108,6 @@
 				</div>
 			</div>
 			<div class="laptop-dummy"></div>
-			<div id="scene3-trigger" class="trigger"></div>
 		</section>
 		<section class="scene scene-3">
 			<div class="scene-bg"></div>
@@ -120,7 +126,6 @@
 				</div>
 			</div>
 			<div class="laptop-dummy"></div>
-			<div id="scene4-trigger" class="trigger"></div>
 		</section>
 		<section class="scene scene-4">
 			<div class="scene-bg"></div>
