@@ -1575,8 +1575,7 @@ form.sign-up  .submit{
 .laptop-dummy{ display:  none}
 .trigger{
     right: 0;
-    width: 100px;
-    border-top: solid 2px #fff;
+    width: 1px;
     z-index: 999;
     position: absolute;
 }
