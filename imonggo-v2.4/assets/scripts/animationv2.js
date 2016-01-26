@@ -36,17 +36,17 @@ function homeAnimation(){
 		.setTween([laptop2,table2,cardboard2,gift1,gift2,gift3,gift4,tag1,tag2,tag3,tag4]).addTo(controller);
 
 	var cardboard2exit = TweenMax.to(".cardboard-2", 4, {css: { y : "-=500px"}, ease:Linear.easeNone});
-	var bg2exit 	= TweenMax.to(".scene-2 .scene-bg", 3, {css: { y: "-=1400px"}, ease:Linear.easeNone});
+	var bg2exit 	= TweenMax.to(".scene-2 .scene-bg", 3, {css: { opacity: 0}, ease:Linear.easeNone});
 	var table2exit = TweenMax.to(".scene-2 .table", 3, {css: { y : "+=500px"}, ease:Linear.ease});
 	var laptop2exit =  TweenMax.to(".laptop", 3, {css: {y : "-=200px"}, ease:Linear.ease});
 	var gift1exit 	= TweenMax.to(".gift-1", 2.2, {css: { y : "-=600px",x : "-=800px", rotation: "95deg", scale: 2}, ease:Linear.easeNone});
 	var gift2exit 	= TweenMax.to(".gift-2", 3.2, {css: { y : "-=1000px",x : "+=500px", rotation: "-195deg", scale: 0.5}, ease:Linear.easeNone});
 	var gift3exit 	= TweenMax.to(".gift-3", 2.5, {css: { y : "-=1000px",x : "-=200px", rotation: "-95deg", scale: 0.1}, ease:Linear.easeNone});
 	var gift4exit 	= TweenMax.to(".gift-4", 2.8, {css: { y : "-=900px",x : "+=50px", rotation: "125deg", scale: 0.1}, ease:Linear.easeNone});
-	var tag1exit 	= TweenMax.to(".tag-1", 2.22, {css: {y : "-=1000px", scale: 0.01}, ease:Linear.easeNone});
-	var tag2exit 	= TweenMax.to(".tag-2", 3.23, {css: {y : "-=1000px", scale: 0.01}, ease:Linear.easeNone});
-	var tag3exit 	= TweenMax.to(".tag-3", 1.24, {css: {y : "-=1000px", scale: 0.01}, ease:Linear.easeNone});
-	var tag4exit 	= TweenMax.to(".tag-4", 2.25, {css: {y : "-=1000px", scale: 0.01}, ease:Linear.easeNone});
+	var tag1exit 	= TweenMax.to(".tag-1", 2.22, {css: {y : "+=600px", scale: 0}, ease:Linear.easeNone});
+	var tag2exit 	= TweenMax.to(".tag-2", 3.23, {css: {y : "+=700px", scale: 0}, ease:Linear.easeNone});
+	var tag3exit 	= TweenMax.to(".tag-3", 2, {css: {y : "+=400px", scale: 0}, ease:Linear.easeNone});
+	var tag4exit 	= TweenMax.to(".tag-4", 2.25, {css: {y : "+=700px", scale: 0}, ease:Linear.easeNone});
 
 	var scene2elementsExit = new ScrollMagic.Scene({triggerElement: ".trigger-2-exit", duration: 1800})
 		.setTween([bg2exit,laptop2exit,table2exit,cardboard2exit,gift1exit,gift2exit,gift3exit,gift4exit,tag1exit,tag2exit,tag3exit,tag4exit]).addTo(controller);
@@ -69,31 +69,33 @@ function homeAnimation(){
 
 	var bg3Exit 		= TweenMax.to(".scene-3 .scene-bg", 3, {css: {opacity : 0}, ease:Linear.easeNone, delay: 4});
 	var cardboard3Exit 	= TweenMax.to(".cardboard-3", 4, {css: {opacity : 0, y : "-=1000px"}, ease:Linear.easeNone});
+	var laptop3Exit 	= TweenMax.to(".laptop", 5, {css: {y : "-=200px"}, ease:Linear.ease});
 	var earthExit 		= TweenMax.to(".obj.earth", 3.2, {css: { y : "+=500px"}, ease:Linear.ease});
-	var moonExit 		= TweenMax.to(".obj.moon", 5, {css: { y : "-=400px", x:"-=300px", rotation: "245deg"}, delay: 2, ease:Linear.ease});
+	var moonExit 		= TweenMax.to(".obj.moon", 5, {css: { y : "-=200px", x:"-=200px", opacity: 0, rotation: "145deg"},  ease:Linear.ease});
 	var satelliteExit 	= TweenMax.to(".obj.satellite", 3, {css: { y : "-=1000px"}, ease:Linear.ease});
 	var paperExit 		= TweenMax.to(".obj.paper", 3.5, {css: { y : "+=500px", x:"-=300px"}, ease:Linear.easeNone});
 	var mugExit 		= TweenMax.to(".obj.mug", 3.1, {css: { y : "+=500px", x:"-=250px"}, ease:Linear.easeNone});
 	var boxExit 		= TweenMax.to(".obj.box", 2.8, {css: { y : "+=500px", x: "+=300px"}, ease:Linear.easeNone});
 	var branchesExit 	= TweenMax.to(".obj.branches", 3.1, {css: { y : "+=1000px", scale: 0.5}, ease:Linear.easeNone});
 	var table4Enter 	= TweenMax.from(".obj.table-unligrowth", 5, {css: { y : "+=1400px"}, ease:Linear.easeNone});
-
+	var SunMove 	= TweenMax.to(".obj.sun", 5, {css: { y : "-=100px", x:"+=100px", opacity: 0.8, scale: 0.8},ease:Linear.ease});
 	
 	var scene3elementsExit = new ScrollMagic.Scene({triggerElement: ".trigger-3-exit", duration: 1800})
-		.setTween([bg3Exit,table4Enter, cardboard3Exit,earthExit,moonExit,satelliteExit,paperExit,mugExit,boxExit,branchesExit]).addTo(controller); 
+		.setTween([SunMove,bg3Exit,table4Enter, laptop3Exit, cardboard3Exit,earthExit,moonExit,satelliteExit,paperExit,mugExit,boxExit,branchesExit]).addTo(controller); 
 
 
-	var SunExit 	= TweenMax.to(".obj.sun", 3, {css: { y : "-=100px", x:"+=100px", opacity: 0},ease:Linear.ease});
-	var cardboard4 = TweenMax.from(".cardboard-4", 2, {css: {opacity : 0, y : "-=500px"}, ease:Linear.easeNone});
-	var building1 = TweenMax.from(".building-1", 2, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
-	var building2 = TweenMax.from(".building-2", 2.4, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
-	var building3 = TweenMax.from(".building-3", 2.8, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
-	var building4 = TweenMax.from(".building-4", 3.2, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
-	var building5 = TweenMax.from(".building-5", 3.6, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
-	var building6 = TweenMax.from(".building-6", 4, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
+	var SunExit 	= TweenMax.to(".obj.sun", 3, {css: { y : "-=300px", x:"+=300px", opacity: 0},ease:Linear.ease});
+	var laptop4 	= TweenMax.to(".laptop", 3, {css: {y : "0px"}, ease:Linear.ease});
+	var cardboard4 = TweenMax.from(".cardboard-4", 2, {css: { y : "-=500px"}, ease:Linear.easeNone});
+	var building1 = TweenMax.from(".building-1", 2, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone});
+	var building2 = TweenMax.from(".building-2", 2.4, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone});
+	var building3 = TweenMax.from(".building-3", 2.8, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone});
+	var building4 = TweenMax.from(".building-4", 3.2, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone});
+	var building5 = TweenMax.from(".building-5", 3.6, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone});
+	var building6 = TweenMax.from(".building-6", 4, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone});
 
 	var scene4elements = new ScrollMagic.Scene({triggerElement: ".trigger-4", duration: 1800})
-		.setTween([SunExit,cardboard4, building1, building2, building3, building4, building5, building6]).addTo(controller); 
+		.setTween([SunExit,laptop4,cardboard4, building1, building2, building3, building4, building5, building6]).addTo(controller); 
 
 
 	var timer = false;
