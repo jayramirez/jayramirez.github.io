@@ -1601,7 +1601,7 @@ form.sign-up  .submit{
     top : 11000px;
 }
 
-@media(max-width: 1300px){
+@media(max-width: 1200px){
     .trigger{display: none;}
     .scenes{ height: auto;}
     .scenes .scene{
@@ -1622,7 +1622,7 @@ form.sign-up  .submit{
     .scene-4 .table-unligrowth{display: block;}
 }
 
-
+/*
 .home-page.disabled .trigger{display: none;}
 .home-page.disabled .scenes{ height: auto;}
 .home-page.disabled .scenes .scene{
@@ -1641,7 +1641,7 @@ form.sign-up  .submit{
 }
 .home-page.disabled .scene-3 .table-unligrowth{display: none;}
 .home-page.disabled .scene-4 .table-unligrowth{display: block;}
-
+*/
 
 @media(max-width: 720px){
     form.sign-up .input-wrap label{ display: block; width: auto; text-align: left; }
