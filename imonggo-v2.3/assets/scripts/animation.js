@@ -1,9 +1,7 @@
+var controller = new ScrollMagic.Controller();
+var tween = new TimelineMax ();
 
-  	var controller = new ScrollMagic.Controller();
-
-	var tween = new TimelineMax ();
 function homeAnimation(){
-
 	if($(window).width()<1300){ 
 		return false;
 	}

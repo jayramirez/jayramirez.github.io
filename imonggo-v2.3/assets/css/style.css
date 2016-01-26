@@ -315,18 +315,16 @@ section.scene-4 .scene-bg {
 .obj.table {
     left: 50%;
     right: auto;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
 	background-image: url('../images/table.svg');
     width: 1300px;
     height: 265px;
+    margin-left: -650px;
     background-size: contain;
 }
 @media(max-height: 700px){
     .obj.table{
         width: 1000px;
+    margin-left: -500px;
     }
 }
 
@@ -495,7 +493,7 @@ section.scene-4 .scene-bg {
     left: 50%;
     right: auto;
     bottom: auto;
-    top: 100px;
+    top: 150px;
     margin-left: -650px;
     width: 200px;
     height: 200px;
@@ -534,7 +532,7 @@ section.scene-4 .scene-bg {
     top: auto;
     width: 200px;
     height: 300px;
-    margin-left: 300px;
+    margin-left: 400px;
 }
 
 .obj.paper {
@@ -550,7 +548,7 @@ section.scene-4 .scene-bg {
     top: auto;
     width: 300px;
     height: 400px;
-    margin-left: -300px;
+    margin-left: -400px;
 }
 
 .obj.mug {
@@ -563,7 +561,7 @@ section.scene-4 .scene-bg {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     bottom: 100px;
-    margin-left: -180px;
+    margin-left: -240px;
     width: 100px;
     height: 150px;
 }
@@ -596,15 +594,6 @@ section.scene-4 .scene-bg {
 	display: inline-block;
 	vertical-align: middle;
 	height: 100%;
-}
-
-
-.trigger{
-    position: absolute;
-    right: 0;
-    width: 10px;
-    z-index: 999;
-    top: 30%;
 }
 
 .scene .explore-arrow {
@@ -1562,6 +1551,54 @@ form.sign-up .input-wrap input[type="checkbox"]{
 
 form.sign-up  .submit{
     display: block; max-width: 400px; margin: 0 auto;
+}
+
+
+/*v2*/
+.scenes{
+    height: 100vh;
+    position: relative;
+}
+
+.scenes .scene{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.scenes .scene-1{z-index: 4 }
+.scenes .scene-2{z-index: 3 }
+.scenes .scene-3{z-index: 2 }
+.scenes .scene-4{z-index: 1 }
+.scene-2 .table{ display:  none}
+.laptop-dummy{ display:  none}
+.trigger{
+    right: 0;
+    width: 100px;
+    border-top: solid 2px #fff;
+    z-index: 999;
+    position: absolute;
+}
+
+.trigger-1{
+    top : 1000px;
+}
+.trigger-2{
+    top : 2500px;
+}
+.trigger-2-exit{
+    top : 5000px;
+}
+.trigger-3{
+    top : 7000px;
+}
+.trigger-3-exit{
+    top : 9000px;
+}
+
+.trigger-4{
+    top : 11000px;
 }
 
 @media(max-width: 720px){
