@@ -1,98 +1,224 @@
-var controller = new ScrollMagic.Controller();
-var tween = new TimelineMax ();
+function HomeAnimation(){
+	var thisClass = this;
 
-function homeAnimation(){
-	if($(window).width()<1300){ 
-		return false;
+	var controller = null;
+	var tween = null;
+
+	var pinStage = null;
+	var tween1 = null;
+	var tween2 = null;
+	var tween2Exit = null;
+	var tween3 = null;
+	var tween3Exit = null;
+	var tween4 = null;
+	var scene1 = null;
+	var scene2elements = null;
+	var scene2elementsExit = null;
+	var scene3elements = null;
+	var scene3elementsExit = null;
+	var scene4elements = null;
+
+	this.init = function(){
+
+		if($(window).width()<1200){ 
+			$('.home-page').addClass('disabled');
+			var timer = false;
+			$(window).resize(function(){
+				if(timer){clearTimeout(timer)}
+				timer = setTimeout(function(){
+					if( $(window).width()<1200 ){
+						return false;
+					}
+					$('.home-page').addClass('loading');
+					$('.home-page').removeClass('loaded');
+					setTimeout(function(){
+						window.location.reload();
+					},500);
+				},1000);
+			});
+			return false;
+		}
+
+		$('body').addClass('animate');
+		thisClass.set();
+		thisClass.pinStage();
+		thisClass.createTween();
+		thisClass.createScene();
+		thisClass.responsive();
+		$('html,body').animate({scrollTop: 0},1);
 	}
-  	var scene1 = new ScrollMagic.Scene({triggerElement: ".scene-1", duration: 500})
-		.setTween(tween).setPin(".scene-1").addTo(controller);
 
-	var scene2 = new ScrollMagic.Scene({triggerElement: ".scene-2", duration: 2000 })
-		.setTween(tween).setPin(".scene-2").addTo(controller);
+	this.set = function(){
+		controller = new ScrollMagic.Controller();
+		tween = new TimelineMax ();
+	}
 
-	var cardboard2 = TweenMax.from(".cardboard-2", 4, {css: {opacity : 0, y : "-=500px"}, ease:Linear.easeNone});
-	var laptop2 = TweenMax.from(".scene-2 .laptop-dummy", 2, {css: { y : "+=400px"}, ease:Linear.easeNone});
-	var table2 = TweenMax.from(".scene-2 .table", 2, {css: { y : "+=600px"}, ease:Linear.easeNone});
-	var gift1 	= TweenMax.from(".gift-1", 2.2, {css: { y : "-=1000px"}, ease:Linear.easeNone});
-	var gift2 	= TweenMax.from(".gift-2", 3.2, {css: { y : "-=1000px"}, ease:Linear.easeNone});
-	var gift3 	= TweenMax.from(".gift-3", 2.5, {css: { y : "-=1000px"}, ease:Linear.easeNone});
-	var gift4 	= TweenMax.from(".gift-4", 2.8, {css: { y : "-=1000px"}, ease:Linear.easeNone});
-	var tag1 	= TweenMax.from(".tag-1", 2.22, {css: {y : "-=500px"}, ease:Linear.easeNone});
-	var tag2 	= TweenMax.from(".tag-2", 3.23, {css: {y : "-=500px"}, ease:Linear.easeNone});
-	var tag3 	= TweenMax.from(".tag-3", 1.24, {css: {y : "-=500px"}, ease:Linear.easeNone});
-	var tag4 	= TweenMax.from(".tag-4", 2.25, {css: {y : "-=500px"}, ease:Linear.easeNone});
-
-	var scene2elements = new ScrollMagic.Scene({triggerElement: ".scene-2", duration: 1800})
-		.setTween([laptop2,table2,cardboard2,gift1,gift2,gift3,gift4,tag1,tag2,tag3,tag4]).addTo(controller);
-
-	var cardboard3 	= TweenMax.from(".cardboard-3", 2, {css: {opacity : 0, y : "-=1000px"}, ease:Linear.easeNone});
-	var laptop3 	= TweenMax.from(".scene-3 .laptop-dummy", 2, {css: { y : "+=400px"}, ease:Linear.easeNone});
-	var earth 		= TweenMax.from(".obj.earth", 1.5, {css: { y : "+=500px"}, ease:Linear.easeNone});
-	var Sun 		= TweenMax.from(".obj.sun", 1.8, {css: { y : "+=500px", x : "-=1000px"}, ease:Linear.easeNone});
-	var moon 		= TweenMax.from(".obj.moon", 1.2, {css: { y : "-=500px", x : "-=500px"}, ease:Linear.easeNone});
-	var satellite 	= TweenMax.from(".obj.satellite", 2, {css: { y : "-=200px", x : "+=1000px"}, ease:Linear.easeNone});
-	var paper 		= TweenMax.from(".obj.paper", 2, {css: { y : "+=100px", x : "+=100px", scaleX: 0.5, scaleY: 0.5}, ease:Linear.easeNone});
-	var mug 		= TweenMax.from(".obj.mug", 2, {css: { y : "+=90px", x : "+=100px", scaleX: 0.5, scaleY: 0.5}, ease:Linear.easeNone});
-	var box 		= TweenMax.from(".obj.box", 2, {css: { y : "+=100px", x : "-=100px", scaleX: 0.5, scaleY: 0.5}, ease:Linear.easeNone});
-	var branches 	= TweenMax.from(".obj.branches", 2, {css: { y : "+=1000px", scaleX: 0.5, scaleY: 0.5}, ease:Linear.easeNone});
-
+	this.pinStage = function(){
+		pinStage = new ScrollMagic.Scene({triggerElement: ".scenes", duration: 13000})
+			.setTween(tween).setPin(".scenes").addTo(controller);
 	
-	var scene3 = new ScrollMagic.Scene({triggerElement: ".scene-3", duration: 2000})
-		.setTween(tween).setPin(".scene-3").addTo(controller);
+		pinStage.offset($('.scenes').height()/2 );
+	}
 
-	var scene3elements = new ScrollMagic.Scene({triggerElement: ".scene-3", duration: 1800})
-		.setTween([laptop3, cardboard3,earth,Sun,moon,satellite,paper,mug,box,branches]).addTo(controller); 
+	this.createTween = function(){
+		tween1 = [];
+		tween2 = [];
+		tween2Exit = [];
+		tween3 = [];
+		tween3Exit = [];
+		tween4 = [];
+		tween1.push( TweenMax.to(".cardboard-1", 3, {css: { y : "-=1000px"}, ease:Linear.easeNone}) );
+		tween1.push( TweenMax.to(".scene-1 .scene-bg", 3, {css: {y: "-=1400px"}, ease:Linear.easeNone}) );
+		tween1.push( TweenMax.to(".scene-1 .table",3.2, {css: {y : "-=1000px"}, ease:Linear.ease}) );
+		tween1.push( TweenMax.to(".laptop",2.5, {css: {y : "-=400px"}, ease:Linear.ease}) );
+		
+		tween2.push( TweenMax.from(".cardboard-2", 2, {css: { y : "-=500px"}, ease:Linear.easeNone}) );
+		tween2.push( TweenMax.from(".scene-2 .table", 1, {css: { y : "+=500px"}, ease:Linear.ease}) );
+		tween2.push( TweenMax.to(".laptop", 4, {css: { y : "0px"}, ease:Linear.easeNone}) );
+		tween2.push( TweenMax.from(".gift-1", 2.2, {css: { y : "-=1000px"}, ease:Linear.easeNone}) );
+		tween2.push( TweenMax.from(".gift-2", 3.2, {css: { y : "-=1000px"}, ease:Linear.easeNone}) );
+		tween2.push( TweenMax.from(".gift-3", 2.5, {css: { y : "-=1000px"}, ease:Linear.easeNone}) );
+		tween2.push( TweenMax.from(".gift-4", 2.8, {css: { y : "-=1000px"}, ease:Linear.easeNone}) );
+		tween2.push( TweenMax.from(".tag-1", 2.22, {css: {y : "-=500px"}, ease:Linear.easeNone}) );
+		tween2.push( TweenMax.from(".tag-2", 3.23, {css: {y : "-=500px"}, ease:Linear.easeNone}) );
+		tween2.push( TweenMax.from(".tag-3", 1.24, {css: {y : "-=500px"}, ease:Linear.easeNone}) );
+		tween2.push( TweenMax.from(".tag-4", 2.25, {css: {y : "-=500px"}, ease:Linear.easeNone}) );
 
-	var cardboard4 = TweenMax.from(".cardboard-4", 2, {css: {opacity : 0, y : "-=1000px"}, ease:Linear.easeNone});
-	var laptop4 = TweenMax.from(".scene-4 .laptop-dummy", 2, {css: { y : "+=500px"}, ease:Linear.easeNone});
-	var building1 = TweenMax.from(".building-1", 2, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
-	var building2 = TweenMax.from(".building-2", 2.4, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
-	var building3 = TweenMax.from(".building-3", 2.8, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
-	var building4 = TweenMax.from(".building-4", 3.2, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
-	var building5 = TweenMax.from(".building-5", 3.6, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
-	var building6 = TweenMax.from(".building-6", 4, {css: {opacity : 0, y : "+=500px"}, ease:Linear.easeNone});
+		tween2Exit.push( TweenMax.to(".cardboard-2", 4, {css: { y : "-=500px"}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".scene-2 .scene-bg", 3, {css: { opacity: 0}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".scene-2 .table", 3, {css: { y : "+=500px"}, ease:Linear.ease}) );
+		tween2Exit.push(  TweenMax.to(".laptop", 3, {css: {y : "-=200px"}, ease:Linear.ease}) );
+		tween2Exit.push( TweenMax.to(".gift-1", 2.2, {css: { y : "-=600px",x : "-=800px", rotation: "95deg", scale: 2}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".gift-2", 3.2, {css: { y : "-=1000px",x : "+=500px", rotation: "-195deg", scale: 0.5}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".gift-3", 2.5, {css: { y : "-=1000px",x : "-=200px", rotation: "-95deg", scale: 0.1}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".gift-4", 2.8, {css: { y : "-=900px",x : "+=50px", rotation: "125deg", scale: 0.1}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".tag-1", 2.22, {css: {y : "+=600px", scale: 0}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".tag-2", 3.23, {css: {y : "+=700px", scale: 0}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".tag-3", 2, {css: {y : "+=400px", scale: 0}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".tag-4", 2.25, {css: {y : "+=700px", scale: 0}, ease:Linear.easeNone}) );
+		
+		tween3.push( TweenMax.from(".cardboard-3", 2, {css: { y : "-=500px"}, ease:Linear.easeNone}) );
+		tween3.push( TweenMax.to(".laptop", 3, {css: {y : "0px"}, ease:Linear.ease}) );
+		tween3.push( TweenMax.from(".obj.earth", 1.5, {css: { y : "+=500px"}, ease:Linear.ease}) );
+		tween3.push( TweenMax.from(".obj.sun", 1.8, {css: { y : "+=500px", x : "-=1000px"}, ease:Linear.ease}) );
+		tween3.push( TweenMax.from(".obj.moon", 1.2, {css: { y : "-=500px", x : "-=500px", rotation: "245deg"}, ease:Linear.ease}) );
+		tween3.push( TweenMax.from(".obj.satellite", 2, {css: { y : "-=200px", x : "+=1500px"}, ease:Linear.ease}) );
+		tween3.push( TweenMax.from(".obj.paper", 2, {css: { y : "+=500px", x : "+=100px", scale: 0.5}, ease:Linear.easeNone}) );
+		tween3.push( TweenMax.from(".obj.mug", 2, {css: { y : "+=300px", x : "+=100px", scale: 0.5}, ease:Linear.easeNone}) );
+		tween3.push( TweenMax.from(".obj.box", 2, {css: { y : "+=500px", x : "-=100px", scale: 0.5}, ease:Linear.easeNone}) );
+		tween3.push( TweenMax.from(".obj.branches", 2, {css: { y : "+=1000px", scale: 0.5}, ease:Linear.easeNone}) );
+		
+		tween3Exit.push( TweenMax.to(".scene-3 .scene-bg", 3, {css: {opacity : 0}, ease:Linear.easeNone, delay: 4}) );
+		tween3Exit.push( TweenMax.to(".cardboard-3", 4, {css: {opacity : 0, y : "-=1000px"}, ease:Linear.easeNone}) );
+		tween3Exit.push( TweenMax.to(".laptop", 5, {css: {y : "-=200px"}, ease:Linear.ease}) );
+		tween3Exit.push( TweenMax.to(".obj.earth", 3.2, {css: { y : "+=500px"}, ease:Linear.ease}) );
+		tween3Exit.push( TweenMax.to(".obj.moon", 5, {css: { y : "-=200px", x:"-=200px", opacity: 0, rotation: "145deg"},  ease:Linear.ease}) );
+		tween3Exit.push( TweenMax.to(".obj.satellite", 3, {css: { y : "-=1000px"}, ease:Linear.ease}) );
+		tween3Exit.push( TweenMax.to(".obj.paper", 3.5, {css: { y : "+=500px", x:"-=300px"}, ease:Linear.easeNone}) );
+		tween3Exit.push( TweenMax.to(".obj.mug", 3.1, {css: { y : "+=500px", x:"-=250px"}, ease:Linear.easeNone}) );
+		tween3Exit.push( TweenMax.to(".obj.box", 2.8, {css: { y : "+=500px", x: "+=300px"}, ease:Linear.easeNone}) );
+		tween3Exit.push( TweenMax.to(".obj.branches", 3.1, {css: { y : "+=1000px", scale: 0.5}, ease:Linear.easeNone}) );
+		tween3Exit.push( TweenMax.from(".obj.table-unligrowth", 5, {css: { y : "+=1400px"}, ease:Linear.easeNone}) );
+		tween3Exit.push( TweenMax.to(".obj.sun", 5, {css: { y : "-=100px", x:"+=100px", opacity: 0.8, scale: 0.8},ease:Linear.ease}) );
 
-   var scene4 = new ScrollMagic.Scene({triggerElement: ".scene-4", duration: 2000})
-		.setTween(tween).setPin(".scene-4").addTo(controller);  
+		tween4.push( TweenMax.to(".obj.sun", 3, {css: { y : "-=300px", x:"+=300px", opacity: 0},ease:Linear.ease}) );
+		tween4.push( TweenMax.to(".laptop", 3, {css: {y : "0px"}, ease:Linear.ease}) );
+		tween4.push( TweenMax.from(".cardboard-4", 2, {css: { y : "-=500px"}, ease:Linear.easeNone}) );
+		tween4.push( TweenMax.from(".building-1", 2, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone}) );
+		tween4.push( TweenMax.from(".building-2", 2.4, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone}) );
+		tween4.push( TweenMax.from(".building-3", 2.8, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone}) );
+		tween4.push( TweenMax.from(".building-4", 3.2, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone}) );
+		tween4.push( TweenMax.from(".building-5", 3.6, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone}) );
+		tween4.push( TweenMax.from(".building-6", 4, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone}) );
+	}
+	
+	this.createScene = function(){
+		scene1 = new ScrollMagic.Scene({triggerElement: ".trigger-1", duration: 1800})
+		.setTween(tween1).addTo(controller);
 
-	var scene4elements = new ScrollMagic.Scene({triggerElement: ".scene-4", duration: 1800})
-		.setTween([ laptop4, cardboard4, building1, building2, building3, building4, building5, building6]).addTo(controller);  
+		scene2elements = new ScrollMagic.Scene({triggerElement: ".trigger-2", duration: 1800})
+			.setTween(tween2).addTo(controller);
 
-	scene1.offset($('.scene-1').height()/2 );
-	scene2.offset($('.scene-1').height()/2 );
-	scene3.offset($('.scene-1').height()/2 );
-	scene4.offset($('.scene-1').height()/2 );
+		scene2elementsExit = new ScrollMagic.Scene({triggerElement: ".trigger-2-exit", duration: 1800})
+			.setTween(tween2Exit).addTo(controller);
 
+		scene3elements = new ScrollMagic.Scene({triggerElement: ".trigger-3", duration: 1800})
+			.setTween(tween3).addTo(controller); 
 
+		scene3elementsExit = new ScrollMagic.Scene({triggerElement: ".trigger-3-exit", duration: 1800})
+			.setTween(tween3Exit).addTo(controller); 	
 
-	var timer = false;
-	$(window).resize(function(){
-		if(timer){clearTimeout(timer)}
-		timer = setTimeout(function(){
+		scene4elements = new ScrollMagic.Scene({triggerElement: ".trigger-4", duration: 1800})
+			.setTween(tween4).addTo(controller); 
 
-				scene1.offset($('.scene-1').height()/2 );
-				scene2.offset($('.scene-1').height()/2 );
-				scene3.offset($('.scene-1').height()/2 );
-				scene4.offset($('.scene-1').height()/2 );
+	}
 
-				scene1.refresh()
-				scene2.refresh()
-				scene3.refresh()
-				scene4.refresh()
-				scene2elements.refresh()
-				scene3elements.refresh()
-				scene4elements.refresh()
+	this.responsive = function(){
+		var timer = false;
+		$(window).resize(function(){
+			if(timer){clearTimeout(timer)}
+			timer = setTimeout(function(){
+			
+				pinStage.removePin(true);
 
-				$('html,body').animate({scrollTop: 0},1)
-			},300)
-	});
+				if($(window).width()<1200){ 
+
+					if( $('.home-page').hasClass('disabled') ){ return false; }
+					
+					controller.destroy(true);
+					controller = null;
+
+					scene1 = null;
+					scene2elements = null;
+					scene2elementsExit = null;
+					scene3elements = null;
+					scene3elementsExit = null;
+					scene4elements = null;
+
+					tween1 = null;
+					tween2 = null;
+					tween2Exit = null;
+					tween3 = null;
+					tween3Exit = null;
+					tween4 = null;
+
+					$('.obj, .scene').attr('style','');
+					$('body').addClass('disabled');
+					$('body').removeClass('animate');
+					$('html,body').animate({scrollTop: 0},1);
+					return false;
+				}
+
+				if( $('body').hasClass('disabled') ){
+					$('body').removeClass('loaded');
+					$('body').addClass('loading');
+					setTimeout(function(){
+						window.location.reload();
+					},500);
+				}
+				
+				setTimeout(function(){
+					thisClass.pinStage();
+					scene1.refresh();
+					scene2elements.refresh();
+					scene2elementsExit.refresh();
+					scene3elements.refresh();
+					scene3elementsExit.refresh();
+					scene4elements.refresh();
+				},1100)
+
+				$('html,body').animate({scrollTop: 0},1);
+			},500);
+		});
+	}
 }
 
 window.onload = function(){
-	homeAnimation();
+	if(animate){
+		animation = new HomeAnimation();
+		animation.init();
+	}
 	$('body').addClass('loaded');
-
 	setTimeout(function(){
 		$('body').removeClass('loading');
 	},300);

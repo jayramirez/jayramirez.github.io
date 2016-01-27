@@ -1,7 +1,4 @@
-
-
 function HomeAnimation(){
-
 	var thisClass = this;
 
 	var controller = null;
@@ -42,6 +39,7 @@ function HomeAnimation(){
 			return false;
 		}
 
+		$('body').addClass('animate');
 		thisClass.set();
 		thisClass.pinStage();
 		thisClass.createTween();
@@ -69,14 +67,16 @@ function HomeAnimation(){
 		tween3 = [];
 		tween3Exit = [];
 		tween4 = [];
+
+		$('.scene-2 .table').remove();
 		tween1.push( TweenMax.to(".cardboard-1", 3, {css: { y : "-=1000px"}, ease:Linear.easeNone}) );
-		tween1.push( TweenMax.to(".scene-1 .scene-bg", 3, {css: {y: "-=1400px"}, ease:Linear.easeNone}) );
-		tween1.push( TweenMax.to(".scene-1 .table",3.2, {css: {y : "-=1000px"}, ease:Linear.ease}) );
-		tween1.push( TweenMax.to(".laptop",2.5, {css: {y : "-=400px"}, ease:Linear.ease}) );
+		tween1.push( TweenMax.to(".scene-1 .scene-bg", 2, {css: {opacity: 0}, ease:Linear.easeNone}) );
+		//tween1.push( TweenMax.to(".scene-1 .table",3.2, {css: {y : "-=1000px"}, ease:Linear.ease}) );
+		//tween1.push( TweenMax.to(".laptop",2.5, {css: {y : "-=400px"}, ease:Linear.ease}) );
 		
 		tween2.push( TweenMax.from(".cardboard-2", 2, {css: { y : "-=500px"}, ease:Linear.easeNone}) );
-		tween2.push( TweenMax.from(".scene-2 .table", 1, {css: { y : "+=500px"}, ease:Linear.ease}) );
-		tween2.push( TweenMax.to(".laptop", 4, {css: { y : "0px"}, ease:Linear.easeNone}) );
+		//tween2.push( TweenMax.from(".scene-2 .table", 1, {css: { y : "+=500px"}, ease:Linear.ease}) );
+		//tween2.push( TweenMax.to(".laptop", 4, {css: { y : "0px"}, ease:Linear.easeNone}) );
 		tween2.push( TweenMax.from(".gift-1", 2.2, {css: { y : "-=1000px"}, ease:Linear.easeNone}) );
 		tween2.push( TweenMax.from(".gift-2", 3.2, {css: { y : "-=1000px"}, ease:Linear.easeNone}) );
 		tween2.push( TweenMax.from(".gift-3", 2.5, {css: { y : "-=1000px"}, ease:Linear.easeNone}) );
@@ -89,7 +89,8 @@ function HomeAnimation(){
 		tween2Exit.push( TweenMax.to(".cardboard-2", 4, {css: { y : "-=500px"}, ease:Linear.easeNone}) );
 		tween2Exit.push( TweenMax.to(".scene-2 .scene-bg", 3, {css: { opacity: 0}, ease:Linear.easeNone}) );
 		tween2Exit.push( TweenMax.to(".scene-2 .table", 3, {css: { y : "+=500px"}, ease:Linear.ease}) );
-		tween2Exit.push(  TweenMax.to(".laptop", 3, {css: {y : "-=200px"}, ease:Linear.ease}) );
+		//tween2Exit.push(  TweenMax.to(".laptop", 3, {css: {y : "-=200px"}, ease:Linear.ease}) );
+		tween2Exit.push( TweenMax.to(".scene-1 .table",3.2, {css: {y : "+=500px"}, ease:Linear.ease}) );
 		tween2Exit.push( TweenMax.to(".gift-1", 2.2, {css: { y : "-=600px",x : "-=800px", rotation: "95deg", scale: 2}, ease:Linear.easeNone}) );
 		tween2Exit.push( TweenMax.to(".gift-2", 3.2, {css: { y : "-=1000px",x : "+=500px", rotation: "-195deg", scale: 0.5}, ease:Linear.easeNone}) );
 		tween2Exit.push( TweenMax.to(".gift-3", 2.5, {css: { y : "-=1000px",x : "-=200px", rotation: "-95deg", scale: 0.1}, ease:Linear.easeNone}) );
@@ -100,7 +101,7 @@ function HomeAnimation(){
 		tween2Exit.push( TweenMax.to(".tag-4", 2.25, {css: {y : "+=700px", scale: 0}, ease:Linear.easeNone}) );
 		
 		tween3.push( TweenMax.from(".cardboard-3", 2, {css: { y : "-=500px"}, ease:Linear.easeNone}) );
-		tween3.push( TweenMax.to(".laptop", 3, {css: {y : "0px"}, ease:Linear.ease}) );
+		//tween3.push( TweenMax.to(".laptop", 3, {css: {y : "0px"}, ease:Linear.ease}) );
 		tween3.push( TweenMax.from(".obj.earth", 1.5, {css: { y : "+=500px"}, ease:Linear.ease}) );
 		tween3.push( TweenMax.from(".obj.sun", 1.8, {css: { y : "+=500px", x : "-=1000px"}, ease:Linear.ease}) );
 		tween3.push( TweenMax.from(".obj.moon", 1.2, {css: { y : "-=500px", x : "-=500px", rotation: "245deg"}, ease:Linear.ease}) );
@@ -112,7 +113,7 @@ function HomeAnimation(){
 		
 		tween3Exit.push( TweenMax.to(".scene-3 .scene-bg", 3, {css: {opacity : 0}, ease:Linear.easeNone, delay: 4}) );
 		tween3Exit.push( TweenMax.to(".cardboard-3", 4, {css: {opacity : 0, y : "-=1000px"}, ease:Linear.easeNone}) );
-		tween3Exit.push( TweenMax.to(".laptop", 5, {css: {y : "-=200px"}, ease:Linear.ease}) );
+		//tween3Exit.push( TweenMax.to(".laptop", 5, {css: {y : "-=200px"}, ease:Linear.ease}) );
 		tween3Exit.push( TweenMax.to(".obj.earth", 3.2, {css: { y : "+=500px"}, ease:Linear.ease}) );
 		tween3Exit.push( TweenMax.to(".obj.moon", 5, {css: { y : "-=200px", x:"-=200px", opacity: 0, rotation: "145deg"},  ease:Linear.ease}) );
 		tween3Exit.push( TweenMax.to(".obj.satellite", 3, {css: { y : "-=1000px"}, ease:Linear.ease}) );
@@ -124,7 +125,7 @@ function HomeAnimation(){
 		tween3Exit.push( TweenMax.to(".obj.sun", 5, {css: { y : "-=100px", x:"+=100px", opacity: 0.8, scale: 0.8},ease:Linear.ease}) );
 
 		tween4.push( TweenMax.to(".obj.sun", 3, {css: { y : "-=300px", x:"+=300px", opacity: 0},ease:Linear.ease}) );
-		tween4.push( TweenMax.to(".laptop", 3, {css: {y : "0px"}, ease:Linear.ease}) );
+		//tween4.push( TweenMax.to(".laptop", 3, {css: {y : "0px"}, ease:Linear.ease}) );
 		tween4.push( TweenMax.from(".cardboard-4", 2, {css: { y : "-=500px"}, ease:Linear.easeNone}) );
 		tween4.push( TweenMax.from(".building-1", 2, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone}) );
 		tween4.push( TweenMax.from(".building-2", 2.4, {css: { y : "+=500px", scale: 0.8}, ease:Linear.easeNone}) );
@@ -185,14 +186,15 @@ function HomeAnimation(){
 					tween4 = null;
 
 					$('.obj, .scene').attr('style','');
-					$('.home-page').addClass('disabled');
+					$('body').addClass('disabled');
+					$('body').removeClass('animate');
 					$('html,body').animate({scrollTop: 0},1);
 					return false;
 				}
 
-				if( $('.home-page').hasClass('disabled') ){
-					$('.home-page').addClass('loading');
-					$('.home-page').removeClass('loaded');
+				if( $('body').hasClass('disabled') ){
+					$('body').removeClass('loaded');
+					$('body').addClass('loading');
 					setTimeout(function(){
 						window.location.reload();
 					},500);
@@ -215,10 +217,10 @@ function HomeAnimation(){
 }
 
 window.onload = function(){
-
-	animation = new HomeAnimation();
-	animation.init();
-
+	if(animate){
+		animation = new HomeAnimation();
+		animation.init();
+	}
 	$('body').addClass('loaded');
 	setTimeout(function(){
 		$('body').removeClass('loading');
