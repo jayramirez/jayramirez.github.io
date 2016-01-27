@@ -54,7 +54,7 @@ function HomeAnimation(){
 	}
 
 	this.pinStage = function(){
-		pinStage = new ScrollMagic.Scene({triggerElement: ".scenes", duration: 13000})
+		pinStage = new ScrollMagic.Scene({triggerElement: ".scenes", duration: 11000})
 			.setTween(tween).setPin(".scenes").addTo(controller);
 	
 		pinStage.offset($('.scenes').height()/2 );
