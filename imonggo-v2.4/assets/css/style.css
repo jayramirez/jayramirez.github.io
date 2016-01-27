@@ -333,6 +333,11 @@ section.scene-4 .scene-bg {
 	bottom: 0px;
 	top: auto;
 }
+
+.scene-3 .obj.table-unligrowth{
+    display: none;
+}
+
 .obj.gift{
     left: 50%;
     right: auto;
@@ -589,7 +594,6 @@ section.scene-4 .scene-bg {
     margin-left: -450px;
     width: 900px;
 }
-
 .vert-spacer {
 	display: inline-block;
 	vertical-align: middle;
@@ -617,9 +621,7 @@ section.scene-4 .scene-bg {
 	font-size: 0px;
 	z-index: 999;
 }
-.obj.cardboard{
-    position: static;
-}
+
 .scene .cardboard-1 {
 	background-image: url('../images/point-of-sale.png');
     background-size: contain;
@@ -1553,13 +1555,13 @@ form.sign-up  .submit{
 
 
 /*v2*/
-.scenes{
+.animate .scenes{
     height: 100vh;
     position: relative;
     width: 100%;
 }
 
-.scenes .scene{
+.animate .scenes .scene{
     position: absolute;
     top: 0;
     right: 0;
@@ -1567,40 +1569,42 @@ form.sign-up  .submit{
     left: 0;
 }
 
-
-.scenes .scene-1{z-index: 4 }
-.scenes .scene-2{z-index: 3 }
-.scenes .scene-3{z-index: 2 }
-.scenes .scene-4{z-index: 1 }
-.scene-4 .table-unligrowth{display: none;}
-.laptop-dummy{ display:  none}
-.trigger{
+.animate .scenes .scene-1{z-index: 4 }
+.animate .scenes .scene-2{z-index: 3 }
+.animate .scenes .scene-3{z-index: 2 }
+.animate .scenes .scene-4{z-index: 1 }
+.animate .scene-3 .table-unligrowth{display: block;}
+.animate .scene-4 .table-unligrowth{display: none;}
+.animate .laptop-dummy{ display:  none}
+.animate .trigger{
     right: 0;
     width: 1px;
     z-index: 999;
     position: absolute;
 }
-
-.trigger-1{
-    top : 1000px;
+.animate .obj.cardboard-2,.animate .obj.cardboard-3,.animate .obj.cardboard-4{
+    position: static;
 }
-.trigger-2{
-    top : 2500px;
+.animate .trigger-1{
+    top : 50vh;
 }
-.trigger-2-exit{
+.animate .trigger-2{
+    top : 1500px;
+}
+.animate .trigger-2-exit{
+    top : 3500px;
+}
+.animate .trigger-3{
     top : 5000px;
 }
-.trigger-3{
-    top : 7000px;
-}
 .trigger-3-exit{
-    top : 9500px;
+    top : 8000px;
 }
 
-.trigger-4{
-    top : 11000px;
+.animate .trigger-4{
+    top : 9000px;
 }
-
+/*
 @media(max-width: 1200px){
     .trigger{display: none;}
     .scenes{ height: auto;}
@@ -1621,28 +1625,7 @@ form.sign-up  .submit{
     .scene-3 .table-unligrowth{display: none;}
     .scene-4 .table-unligrowth{display: block;}
 }
-
-/*
-.home-page.disabled .trigger{display: none;}
-.home-page.disabled .scenes{ height: auto;}
-.home-page.disabled .scenes .scene{
-    position: relative;
-    height: 100vh;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-}
-.home-page.disabled .laptop-dummy{
-    display: block;
-}
-.home-page.disabled .obj.cardboard{
-    position: relative;
-}
-.home-page.disabled .scene-3 .table-unligrowth{display: none;}
-.home-page.disabled .scene-4 .table-unligrowth{display: block;}
 */
-
 @media(max-width: 720px){
     form.sign-up .input-wrap label{ display: block; width: auto; text-align: left; }
     form.sign-up .input-wrap input, form.sign-up .input-wrap select{ display: block; width: 100%;}
