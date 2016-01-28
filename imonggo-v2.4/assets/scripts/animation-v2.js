@@ -95,10 +95,10 @@ function HomeAnimation(){
 		tween2Exit.push( TweenMax.to(".gift-2", 3.2, {css: { y : "-=1000px",x : "+=500px", rotation: "-195deg", scale: 0.5}, ease:Linear.easeNone}) );
 		tween2Exit.push( TweenMax.to(".gift-3", 2.5, {css: { y : "-=1000px",x : "-=200px", rotation: "-95deg", scale: 0.1}, ease:Linear.easeNone}) );
 		tween2Exit.push( TweenMax.to(".gift-4", 2.8, {css: { y : "-=900px",x : "+=50px", rotation: "125deg", scale: 0.1}, ease:Linear.easeNone}) );
-		tween2Exit.push( TweenMax.to(".tag-1", 2.22, {css: {y : "+=600px", scale: 0}, ease:Linear.easeNone}) );
-		tween2Exit.push( TweenMax.to(".tag-2", 3.23, {css: {y : "+=700px", scale: 0}, ease:Linear.easeNone}) );
-		tween2Exit.push( TweenMax.to(".tag-3", 2, {css: {y : "+=400px", scale: 0}, ease:Linear.easeNone}) );
-		tween2Exit.push( TweenMax.to(".tag-4", 2.25, {css: {y : "+=700px", scale: 0}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".tag-1", 2.22, {css: {y : "-=500px"}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".tag-2", 3.23, {css: {y : "-=500px"}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".tag-3", 1.24, {css: {y : "-=500px"}, ease:Linear.easeNone}) );
+		tween2Exit.push( TweenMax.to(".tag-4", 2.25, {css: {y : "-=500px"}, ease:Linear.easeNone}) );
 		
 		tween3.push( TweenMax.from(".cardboard-3", 2, {css: { y : "-=500px"}, ease:Linear.easeNone}) );
 		//tween3.push( TweenMax.to(".laptop", 3, {css: {y : "0px"}, ease:Linear.ease}) );
