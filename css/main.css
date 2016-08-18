@@ -1,0 +1,98 @@
+body { 
+  background: #000;
+  color: #fff;
+  font-family: 'Oxygen', sans-serif;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
+  
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+  
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-color: rgba(0, 0, 0.5)
+}
+
+.logo{
+  width: 550px;
+  height: 131px;
+  margin: 0 auto;
+  background: url(../img/isb.png) no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.coming-soon{
+  width: 598px;
+  height: 43px;
+  margin: 30px auto 40px;
+  background: url(../img/coming-soon.png) no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.social{
+  text-align: center;
+}
+.social a{
+  display: inline-block;
+  margin: 0 5px;
+  width: 59px;
+  height: 59px;
+  background: url(../img/icons.png) no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.social a.fb{
+  background-position: 0 0;
+}
+
+.social a.tw{
+  background-position: -70px 0;
+}
+
+.social a.in{
+  background-position: -140px 0;
+}
+
+
+@media(max-width: 720px){
+  .logo{
+    width: 280px;
+    height: 80px;
+    background-size: contain;
+  }
+
+  .coming-soon{
+    width: 290px;
+    height: 30px;
+    margin: 20px auto 30px;
+    background-size: contain;
+  }
+}
