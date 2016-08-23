@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ISB</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
+    <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -16,19 +16,70 @@
   </head>
   <body>
     <div class="video-container">
-    <video autoplay loop="true" width="1280" height="720">
+    <video autoplay loop="true" width="1280" height="720" id="video">
       <source type="video/mp4" src="video/teaser.mp4">
     </video>
   </div>
   
+  <div class="menu">
+    <div class="burger">
+      <span></span>
+    </div>
+    <span>MENU</span>
+  </div>
+
+  <div class="locations">
+    <h2>Locations</h2>
+    <div class="row">
+      <div class="col">
+        <div class="map zhuhai"></div>
+        <span>Zhuhai</span>
+      </div>
+      <div class="col">
+        <div class="map shanghai"></div>
+        <span>Shanghai</span>
+      </div>
+      <div class="col">
+        <div class="map anderstorp"></div>
+        <span>Anderstorp</span>
+      </div>
+    </div>
+  </div>
+  
   <div class="overlay">
     <div class="logo">ISB RACING SCHOOL</div>
-    <div class="coming-soon">WEBSITE COMING SOON</div>
+    <div class="copy">
+      <p>The Ultimate International SuperBike Racing School</p>
+      <h2>COMING SOON</h2>
+    </div>
     <div class="social">
       <a href="#" class="fb">facebook</a>
-      <a href="#" class="tw">twitter</a>
+      <a href="#" class="yt">youtube</a>
       <a href="#" class="in">instagram</a>
+      <a href="#" class="wb">weibo</a>
+    </div>
+    <div class="sound">
+      <div class="vol"></div>
+      <span class="on active">On</span> / 
+      <span class="off">Off</span>
     </div>
   </div>
   </body>
+
+    <script type="text/javascript">
+      $('.menu').click(function(){
+        $('.locations').toggleClass('active');
+      });
+      $('.sound').click(function(){
+        var vid = document.getElementById('video');
+        if(vid.muted){
+          vid.muted = false;
+          $('.sound .on, .sound .off').toggleClass('active')
+        }
+        else{
+          vid.muted = true;
+          $('.sound .on, .sound .off').toggleClass('active')
+        }
+      })
+    </script>
 </html>
