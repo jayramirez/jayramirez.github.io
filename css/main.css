@@ -167,7 +167,6 @@ body {
   background-color: #fff;
   display: block;
   position: relative;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
 }
 
 .menu .burger span:before{
@@ -178,7 +177,6 @@ body {
   position: relative;
   content: '';
   top: -12px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
 }
 
 .menu .burger span:after{
@@ -189,7 +187,6 @@ body {
   position: relative;
   content: '';
   top: 7px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
 }
 
 
@@ -282,6 +279,9 @@ body {
 
   .menu > span{
     display: none;
+  }
+  .menu .burger span:after,.menu .burger span:before,.menu .burger span{
+    box-shadow: 0 0 5px rgba(0, 0, 0,0.5)
   }
   .locations{
     top: 0;
