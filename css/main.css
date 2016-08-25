@@ -232,9 +232,9 @@ body {
 }
 
 .locations .map{
-  width: 250px;
-  height: 250px;
-  background-color: #333;
+  width: 200px;
+  height: 200px;
+  background-color: #232323;
   border-radius: 100%;
   margin: 20px auto;
   background-position: center;
@@ -248,6 +248,15 @@ body {
 }
 .locations .map.anderstorp{
   background-image: url(../img/anderstorp.png)
+}
+.locations .map.phillip{
+  background-image: url(../img/philip.png)
+}
+.locations .map.ordos{
+  background-image: url(../img/ordos.png)
+}
+.locations .map.brno{
+  background-image: url(../img/brno.png)
 }
 
 @media(max-width: 720px){
