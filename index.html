@@ -4,9 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ISB</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script   src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <title>EXOST</title>
+
+    <link href="assets/vendor/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/owl-carousel/assets/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script type="text/javascript" src="assets/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/jQueryRoundabout-2.4.2.js"></script>
+    <script type="text/javascript" src="assets/vendor/jquery.filterizr.min.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -14,86 +26,257 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="video-container">
-      <video autoplay loop="true" width="1280" height="720" id="video">
-        <source type="video/mp4" src="video/teaser.mp4"></source>
-      </video>
-    </div>
-  
-    <div class="menu">
-      <div class="burger">
-        <span></span>
-      </div>
-      <span>MENU</span>
-    </div>
+<body>
+	<nav class="navbar navbar-fixed-top">
+		<div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <img alt="EXOST" src="assets/img/exost.png">
+	      </a>
+	    </div>
 
-  <div class="locations">
-    <h2>Locations</h2>
-    <div class="row">
-      <div class="col">
-        <div class="map zhuhai"></div>
-        <span>Zhuhai</span>
-      </div>
-      <div class="col">
-        <div class="map shanghai"></div>
-        <span>Shanghai</span>
-      </div>
-      <div class="col">
-        <div class="map anderstorp"></div>
-        <span>Anderstorp</span>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="map phillip"></div>
-        <span>Phillip</span>
-      </div>
-      <div class="col">
-        <div class="map ordos"></div>
-        <span>Ordos</span>
-      </div>
-      <div class="col">
-        <div class="map brno"></div>
-        <span>Brno</span>
-      </div>
-    </div>
-  </div>
-  
-  <div class="overlay">
-    <div class="logo">ISB RACING SCHOOL</div>
-    <div class="copy">
-      <p>The Ultimate International SuperBike Racing School</p>
-      <h2>COMING SOON</h2>
-    </div>
-    <div class="social">
-      <a href="#" class="fb">facebook</a>
-      <a href="#" class="yt">youtube</a>
-      <a href="#" class="in">instagram</a>
-      <a href="#" class="wb">weibo</a>
-    </div>
-    <div class="sound">
-      <div class="vol"></div>
-      <span class="on active">On</span> / 
-      <span class="off">Off</span>
-    </div>
-  </div>
-  </body>
+	    <div class="nav-toggle">
+	    	<div>
+	    		<span></span>
+	    		<span></span>
+	    		<span></span>
+	    	</div>
+	    </div>
+	  </div>	
+	</nav>
 
-    <script type="text/javascript">
-      $('.menu').click(function(){
-        $('.locations').toggleClass('active');
-      });
-      $('.sound').click(function(){
-        var vid = document.getElementById('video');
-        if(vid.muted){
-          vid.muted = false;
-          $('.sound .on, .sound .off').toggleClass('active')
-        }
-        else{
-          vid.muted = true;
-          $('.sound .on, .sound .off').toggleClass('active')
-        }
-      })
-    </script>
+	<div class="main-nav">
+		<header>
+			<div class="language"><i class="fa fa-globe"></i> LANGUAGE</div>
+			<div class="nav-close">
+				<i class="fa fa-times"></i>
+			</div>
+		</header>
+		<div class="social">
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+			<a href="#"><i class="fa fa-youtube"></i></a>
+		</div>
+		<nav>
+			<a onclick="pageScroll('#about')">ABOUT</a>
+			<a onclick="pageScroll('#product')">PRODUCTS</a>
+			<a>WHERE TO BUY</a>
+			<a>LEGAL</a>
+			<a>SUPPORT</a>
+		</nav>
+	</div>
+
+	<div class="mouse-nav-toggle"></div>
+
+	<section class="page" id="home">
+		<div class="video-container">
+	      <video autoplay loop="true" width="1280" height="720" id="video" muted>
+	        <source type="video/mp4" src="assets/video/home.mp4"></source>
+	      </video>
+	    </div>
+	    <div class="sound">
+		    <div class="vol"><i class="fa fa-volume-up"></i></div>
+		    <span class="on">On</span> / 
+		    <span class="off active">Off</span>
+		  </div>
+	</section>
+	<section class="page page-about" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 pull-right">
+					<article>
+						<div class="article-header">
+							<span class="sup">ABOUT US</span>
+							<h2>EXOST</h2>
+						</div>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. </p>
+
+						<p>Consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="page page-product" id="product">
+		<div class="carousel-ctrl next"></div>	
+		<div class="carousel-ctrl prev"></div>	
+		<div class="product-carousel">
+			<div class="item item-cross">
+				<div class="center-vertical">
+			      <div class="container">
+							<div class="row row-product">
+								<div class="col-md-8"><img src="assets/img/product-cross.png"></div>
+								<div class="col-md-4 col-product-info">
+									<article>
+										<div class="article-header">
+											<span class="sup">EXOST CROSS</span>
+											<h2>360 CROSS</h2>
+											<span class="sub">VOLUPTI UMQUAM QUI REPRAE.</span>
+										</div>
+										<p>Osam seque que con et porrora sit rem dolupta diaerro eum fugia aute sim ent qui ium quiatia es estrum im qui dipsa pa dolupta eiumqui delenetur, int et accumquam, qui simpori onsendis es unt resequodis earcidendit alignatiume volupti umquam qui vendis reprae verum ipis mo qui si ut que desciant essum quis sinimposam, con explibus eicidel imus rerovit atemquassum re dolo blacestotas et vendit est apis eveleste verfers.</p>
+
+										<div>
+											<a class="btn" href="#">SEE PRODUCT</a>
+											<a class="btn"><i class="fa fa-heart"></i> LIKE</a>
+											<a class="btn"><i class="fa fa-share-alt"></i> SHARE</a>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="item item-cyclone">
+				<div class="center-vertical">
+			      <div class="container">
+							<div class="row row-product">
+								<div class="col-md-8"><img src="assets/img/product-cyclone.png"></div>
+								<div class="col-md-4 col-product-info">
+									<article>
+										<div class="article-header">
+											<span class="sup">EXOST AQUA</span>
+											<h2>AQUA CYCLONE</h2>
+											<span class="sub">VOLUPTI UMQUAM QUI REPRAE.</span>
+										</div>
+										<p>Osam seque que con et porrora sit rem dolupta diaerro eum fugia aute sim ent qui ium quiatia es estrum im qui dipsa pa dolupta eiumqui delenetur, int et accumquam, qui simpori onsendis es unt resequodis earcidendit alignatiume volupti umquam qui vendis reprae verum ipis mo qui si ut que desciant essum quis sinimposam, con explibus eicidel imus rerovit atemquassum re dolo blacestotas et vendit est apis eveleste verfers.</p>
+										<div>
+											<a class="btn" href="#">SEE PRODUCT</a>
+											<a class="btn"><i class="fa fa-heart"></i> LIKE</a>
+											<a class="btn"><i class="fa fa-share-alt"></i> SHARE</a>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="item item-speed">
+				<div class="center-vertical">
+			      <div class="container">
+							<div class="row row-product">
+								<div class="col-md-8"><img src="assets/img/product-speed.png"></div>
+								<div class="col-md-4 col-product-info">
+									<article>
+										<div class="article-header">
+											<span class="sup">EXOST SPEED</span>
+											<h2>XSPEED 3</h2>
+											<span class="sub">VOLUPTI UMQUAM QUI REPRAE.</span>
+										</div>
+										<p>Osam seque que con et porrora sit rem dolupta diaerro eum fugia aute sim ent qui ium quiatia es estrum im qui dipsa pa dolupta eiumqui delenetur, int et accumquam, qui simpori onsendis es unt resequodis earcidendit alignatiume volupti umquam qui vendis reprae verum ipis mo qui si ut que desciant essum quis sinimposam, con explibus eicidel imus rerovit atemquassum re dolo blacestotas et vendit est apis eveleste verfers.</p>
+										<div>
+											<a class="btn" href="#">SEE PRODUCT</a>
+											<a class="btn"><i class="fa fa-heart"></i> LIKE</a>
+											<a class="btn"><i class="fa fa-share-alt"></i> SHARE</a>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+	<section class="page page-category" id="category">
+		<div class="carousel-ctrl next"></div>	
+		<div class="carousel-ctrl prev"></div>	
+		<ul class="category-carousel">
+			<li class="item" data-category="1">
+				<img src="assets/img/product-cross.png">
+				<h2>CROSS</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.</p>
+			</li>
+			<li class="item" data-category="2">
+				<img src="assets/img/product-cyclone.png">
+				<h2>FUNCTION</h2>
+				<p> Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</li>
+			<li class="item" data-category="3">
+				<img src="assets/img/product-speed.png">
+				<h2>SPEED</h2>
+				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</li>
+		</ul>
+	</section>
+	<section class="page page-product-listing" id="product-list">
+		<div class="container">
+			<nav>
+				<a data-filter="all">ALL</a>
+				<a data-filter="1">CROSS</a>
+				<a data-filter="2">SPEED</a>
+				<a data-filter="3">FUNCTION</a>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="list">
+				<div class="item filtr-item" data-sort="value" data-category="1">
+					<div><img src="assets/img/product-cross.png"></div>
+				</div>
+				<div class="item filtr-item" data-sort="value" data-category="2">
+					<div><img src="assets/img/product-cyclone.png"></div>
+				</div>
+				<div class="item filtr-item" data-sort="value" data-category="3">
+					<div><img src="assets/img/product-speed.png"></div>
+				</div>
+
+				<div class="item filtr-item" data-sort="value" data-category="2">
+					<div><img src="assets/img/product-cyclone.png"></div>
+				</div>
+				<div class="item filtr-item" data-sort="value" data-category="3">
+					<div><img src="assets/img/product-speed.png"></div>
+				</div>
+
+				<div class="item filtr-item" data-sort="value" data-category="1">
+					<div><img src="assets/img/product-cross.png"></div>
+				</div>
+				<div class="item filtr-item" data-sort="value" data-category="2">
+					<div><img src="assets/img/product-cyclone.png"></div>
+				</div>
+
+				<div class="item filtr-item" data-sort="value" data-category="1">
+					<div><img src="assets/img/product-cross.png"></div>
+				</div>
+				<div class="item filtr-item" data-sort="value" data-category="2">
+					<div><img src="assets/img/product-cyclone.png"></div>
+				</div>
+				<div class="item filtr-item" data-sort="value" data-category="3">
+					<div><img src="assets/img/product-speed.png"></div>
+				</div>
+				<div class="item filtr-item" data-sort="value" data-category="2">
+					<div><img src="assets/img/product-cyclone.png"></div>
+				</div>
+				<div class="item filtr-item" data-sort="value" data-category="3">
+					<div><img src="assets/img/product-speed.png"></div>
+				</div>
+
+				<div class="item filtr-item" data-sort="value" data-category="1">
+					<div><img src="assets/img/product-cross.png"></div>
+				</div>
+				<div class="item filtr-item" data-sort="value" data-category="2">
+					<div><img src="assets/img/product-cyclone.png"></div>
+				</div>
+				<div class="item filtr-item" data-sort="value" data-category="3">
+					<div><img src="assets/img/product-speed.png"></div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+</body>
 </html>
