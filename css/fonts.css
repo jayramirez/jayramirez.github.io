@@ -1,0 +1,38 @@
+
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/futura/futural.eot');
+    src: url('fonts/futura/futural.eot?#iefix') format('embedded-opentype'),
+         url('fonts/futura/futural.woff') format('woff'),
+         url('fonts/futura/futural.ttf') format('truetype'),
+         url('fonts/futura/futural.svg#futural') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'chunkfive';
+    src: url('fonts/chunkfive/chunkfive.eot');
+    src: url('fonts/chunkfive/chunkfive.eot?#iefix') format('embedded-opentype'),
+         url('fonts/chunkfive/chunkfive.woff') format('woff'),
+         url('fonts/chunkfive/chunkfive.ttf') format('truetype'),
+         url('fonts/chunkfive/chunkfive.svg#chunkfive') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'texgyreadventor';
+  src: url("../fonts/texGyre-regular/texgyreadventor-regular-webfont.eot");
+  src: url("../fonts/texGyre-regular/texgyreadventor-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/texGyre-regular/texgyreadventor-regular-webfont.woff") format("woff"), url("../fonts/texGyre-regular/texgyreadventor-regular-webfont.ttf") format("truetype"), url("../fonts/texGyre-regular/texgyreadventor-regular-webfont.svg#texgyreadventorregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'texgyreadventor';
+  src: url("../fonts/texGyre-bold/texgyreadventor-bold-webfont.eot");
+  src: url("../fonts/texGyre-bold/texgyreadventor-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/texGyre-bold/texgyreadventor-bold-webfont.woff") format("woff"), url("../fonts/texGyre-bold/texgyreadventor-bold-webfont.ttf") format("truetype"), url("../fonts/texGyre-bold/texgyreadventor-bold-webfont.svg#texgyreadventorbold") format("svg");
+  font-weight: bold;
+  font-style: bold;
+}
