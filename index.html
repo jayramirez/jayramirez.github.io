@@ -28,9 +28,11 @@
       <!-- Your customer chat code -->
       <div class="fb-customerchat"
         attribution=setup_tool
-        page_id="203829943308911"
-  theme_color="#ffc300">
+        page_id="101819624866122">
       </div>
-      <button onclick="FB.CustomerChat.showDialog();">show</button>
+      <button onclick="FB.CustomerChat.show(false);">show plugin</button>
+      <button onclick="FB.CustomerChat.hide();">hide plugin</button>
+      <button onclick="FB.CustomerChat.showDialog();">show dialog</button>
+      <button onclick="FB.CustomerChat.hideDialog();">hide dialog</button>
 </body>
 </html>
